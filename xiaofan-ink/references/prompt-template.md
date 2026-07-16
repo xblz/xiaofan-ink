@@ -29,8 +29,8 @@ Suggested elements:
 Chinese handwritten labels:
 {标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
 
-Color use:
-Black for main line art and Xiaofan (Xiaofan is monochrome line art only, no skin tone or color fill). Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state.
+Color use (warm-ink palette):
+Black (#1A1A1A, ink, not pure #000000) for main line art and Xiaofan (Xiaofan is monochrome line art only, no skin tone or color fill). Orange (#E67E22) for main flow/path/arrows. Red (#C0392B) only for key warnings/problems/results. Blue (#2C5F8D) only for secondary notes or feedback/system state. Use at most 1-2 annotation colors per image. Keep it sparse, do not turn the image into a rainbow.
 
 Constraints:
 One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, interesting but not childish, strange but clean.
