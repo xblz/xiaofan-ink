@@ -12,3 +12,6 @@ dist/
 
 # Logs
 *.log
+
+# IP development scratch space (reference photo, candidates, legacy examples)
+.ip-dev/
