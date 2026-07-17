@@ -6,6 +6,48 @@
 
 ---
 
+## v1.2 — 2026-07-17(长期创作计划 + 系列首发)
+
+建立《小凡墨水周记》正式系列,把仓库从"skill 验证库"升级到"长期创作内容库"。
+
+**新增文档**:
+- `doc/CREATION-PLAN.md` — 长期创作规范(系列定位/节奏/结构/流程/决策/基础设施/长期视角)
+- `doc/SERIES-STATE.md` — 防重复数据库 + 三维轮换状态跟踪(姿态/装扮/物件已用未用清单)
+- `doc/essays/README.md` — 系列说明,跟实战样本划清职责
+
+**新增目录**:
+- `doc/essays/` — 正式发布内容(从 001 开始)
+- `doc/essays/images/00X-<slug>/` — 配图(同号子目录)
+
+**新增内容**(系列第 1 篇):
+- `doc/essays/001-why-i-dont-do-daily-plan.md` — 《为什么我不再做每日计划》(约 600 字,4 段)
+- `doc/essays/images/001-why-i-dont-do-daily-plan/01-04.png` — 4 张配图
+- `xiaofan-ink/assets/prompts/articles/001-why-i-dont-do-daily-plan.md` — 实战 prompt 库
+
+**第 1 篇轮换记录**(严格执行 SERIES-STATE 防反复刻):
+- 表情:2 默认 + 1 困惑 + 1 满足(实战 3 用了思考/疲惫,本次换困惑/满足)
+- 装扮:1/4 用(咖啡杯,实战 2 用过耳机/工具包/笔记本,实战 3 没用)
+- 姿态:4 种全部为新(卡纸堆 / 洞里伸手 / 蹲角落 / 站回头)
+- 物件:纸堆 / 洞 / 桌(实战 1-3 没用过)
+
+**实战样本划清职责**:
+- `doc/whiteboard-vs-doc.md` / `doc/why-i-quit-gtd.md` / `doc/why-i-write-drafts.md` 顶部加"状态:skill 实战验证样本,非《`essays/`》正式系列"
+- 这 3 篇继续作为 skill 能力展示,但不计入正式系列
+
+**系列元决定**(拍板项):
+- 系列名:《小凡墨水周记》
+- 频率:每周 1 篇(每周三)
+- 长度:600-1000 字
+- 配图:4 张
+- 视觉:warm-ink 4 色,小凡 deadpan 默认 + 1-2 种微表情
+
+**第 1 篇 takeaway(给下一篇用)**:
+- 收尾用满足时 prompt 措辞要更明显("slight 1-2mm mouth upturn" 不够,改 "slight 3-4mm mouth upturn" 或加 "almost-smile")
+- "试图接" + "困惑" 组合容易让 body 跟 face 不连戏,要么统一方向要么去掉意图
+- 桌面/桌子的"满"会挤压小凡,小物件(杯/瓶/小盒)效果更好
+
+---
+
 ## v1.1 — 2026-07-17(实战 3 — 表情库首篇实战)
 
 基于 v1.0 新增的"微表情库",写第三篇实战示例文章,验证表情库在实战中的效果。
