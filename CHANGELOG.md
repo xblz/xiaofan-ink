@@ -6,6 +6,38 @@
 
 ---
 
+## v1.1 — 2026-07-17(实战 3 — 表情库首篇实战)
+
+基于 v1.0 新增的"微表情库",写第三篇实战示例文章,验证表情库在实战中的效果。
+
+**新增文章 + 配图**:
+- `doc/why-i-write-drafts.md` — 第三篇实战文章(约 600 字)
+  - 主题:为什么我开始主动写"废稿"(写作方法反思)
+  - 4 段配 4 张图,1 个结论
+- `doc/images/why-i-write-drafts/01-draft-pile.png` — 废稿堆(deadpan 默认)
+- `doc/images/why-i-write-drafts/02-three-openings.png` — 三个被划掉的开头(思考表情)
+- `doc/images/why-i-write-drafts/03-rewrite.png` — 推倒重来(疲惫表情)
+- `doc/images/why-i-write-drafts/04-real-cost.png` — 成本是废稿(deadpan 默认)
+
+**新增实战 prompt 库**:
+- `xiaofan-ink/assets/prompts/articles/why-i-write-drafts.md`
+  - 4 张图各自的 5 段 prompt(Theme/Structure type/Core idea/Composition/Chinese labels)
+  - 表情选词理由 + 表情使用复盘
+  - 反复刻陷阱预标记
+
+**表情使用复盘**:
+- 4 张图用了 **2 默认 + 1 思考 + 1 疲惫**
+- 情绪节奏:平 → 思考 → 疲惫 → 平(完整呼吸)
+- 4 张图全部一次过,无重出
+- 表情库设计验证成功:微表情在 deadpan 底色上有效传递 1 度情绪,又不破坏"白板随手画"清冷气质
+
+**实战结论**:
+- 表情库使用纪律(同文最多 2-3 种 + 一旦加表情必须删掉 deadpan)在实战中可操作
+- prompt 替换词(`slightly raised right eyebrow, eyes looking down-left` 等)直接生效,没额外 trigger 错误风格
+- 表情库和备选装扮(本篇未用)可独立/叠加使用,互不冲突
+
+---
+
 ## v1.0 — 2026-07-17(微表情库)
 
 基于 deadpan 底色,加 5 个微表情变体,让"小凡-读者"的情感连接更具体。
