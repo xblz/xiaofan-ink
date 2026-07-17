@@ -150,4 +150,4 @@ Constraints: ...
   - 文件路径:`doc/images/<slug>/` → `doc/essays/images/001-<slug>/`
   - 命名:`01.png` → `01-paper-sunk.png`(带描述)
   - front matter:实战样本没有,系列每篇加 YAML
-- 整体流程跑通,后续每周三按相同流程复制即可
+- 整体流程跑通,后续想写就写,按相同流程复制即可(~~每周三~~ v1.7 改)

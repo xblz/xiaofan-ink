@@ -5,6 +5,8 @@
 > 16:9 横版 | 小凡 IP | 纯白手绘 | 少量红橙蓝中文批注 | Codex Skill
 >
 > ⚠️ 本仓库 fork 自 [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations),作为私有项目自用,IP 已从原作者的"小黑"替换为"小凡"(基于真人面部特征风格化转译)。原作者 Ian 的"小黑"IP 仍归原作者所有,详见 NOTICE.md。
+>
+> 关联公众号:**小凡的草稿本**(过程 > 结论 / 草稿 > 作品 / 死板冷静 / 想写就写,见 `brand/README.md`)
 
 ---
 
@@ -128,12 +130,14 @@
 │   ├── why-i-quit-gtd.md           ← 实战第二篇(v0.6 GTD 反思)
 │   ├── why-i-write-drafts.md       ← 实战第三篇(v1.1 写废稿 + 表情库首篇)
 │   ├── essays/                     ← 《小凡墨水周记》正式系列(v1.2+)
-│   │   ├── README.md               ← 系列说明
+│   │   ├── README.md               ← 系列说明(节奏 + 品牌定位 + 初衷)
+│   │   ├── 000-grass-journal-intro.md   ← 开篇(品牌定位 + 系列预告)
 │   │   ├── 001-why-i-dont-do-daily-plan.md
 │   │   ├── 002-focus-boundary.md
 │   │   └── images/
-│   │       ├── 001-why-i-dont-do-daily-plan/  (4 张)
-│   │       └── 002-focus-boundary/             (5 张)
+│   │       ├── 000-grass-journal-intro/   (cover + 4 张,去 IP)
+│   │       ├── 001-why-i-dont-do-daily-plan/  (cover + 4 张)
+│   │       └── 002-focus-boundary/             (cover + 5 张)
 │   └── images/                     ← 实战配图(按文章分子目录)
 │       ├── whiteboard-vs-doc/      (4 张)
 │       ├── why-i-quit-gtd/         (4 张)
