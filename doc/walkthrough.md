@@ -13,9 +13,11 @@
 | 顺序 | 文件 | 用途 |
 |---|---|---|
 | 1 | `xiaofan-ink/references/style-dna.md` | 风格 DNA、调色板(温暖墨水感)、禁忌 |
-| 2 | `xiaofan-ink/references/xiaofan-ip.md` | 小凡 IP 的外形、性格、动作库、禁忌 |
+| 2 | `xiaofan-ink/references/xiaofan-ip.md` | 小凡 IP 的外形、性格、动作库、备选装扮、**微表情库**、禁忌 |
 | 3 | `xiaofan-ink/references/composition-patterns.md` | 8 种结构类型 + 反复刻规则 |
-| 4 | `xiaofan-ink/references/prompt-template.md` | 生图 prompt 模板(英文) |
+| 4 | `xiaofan-ink/references/prompt-template.md` | 生图 prompt 模板(英文)+ **表情选择 guidance** |
+
+> **v1.0+ 新增能力**:小凡 IP 现在有 5 个微表情变体(思考/困惑/疲惫/惊讶/满足),实战时可在 IP 描述段里把 `deadpan calm expression` 替换为对应微表情词。默认 deadpan,同文最多 2-3 种不同表情。详见 `xiaofan-ip.md` 表情库段 + `prompt-template.md` 表情选择段。
 
 QA 阶段再读 `xiaofan-ink/references/qa-checklist.md`。
 
@@ -334,6 +336,78 @@ assets/<article-slug>-illustrations/
 ### 7.5 怎么判断一张图算"合格"?
 
 第一眼应该是"有点怪",然后 1 秒内看懂结构。如果第一眼像教程页/PowerPoint,就重出。
+
+### 7.6 表情库怎么用?(v1.0+)
+
+默认用 `deadpan calm expression`(绝大多数场景用这个)。如果这张图需要 1 度情绪传递,可在 IP 描述段里把 deadpan 词替换为对应微表情词,例如:
+
+- `slightly raised right eyebrow, eyes looking down-left, mouth closed` — 思考
+- `drooping brows, eyes half-closed, mouth loose` — 疲惫
+- 完整表情表见 `xiaofan-ink/assets/prompts/_standard-ip-description.md` 表情选项段
+
+**纪律**:同文最多 2-3 种不同表情;一旦加表情,IP 描述段里 `deadpan calm expression` 必须删掉(避免和表情词冲突)。实战示例见附录 B 实战 3。
+
+---
+
+## 8. 附录 B:实战案例集
+
+xiaofan-ink 已经在实战中验证过 3 篇文章(每篇 4 张配图),作为后续实战的参考案例:
+
+| # | 文章 | 主题 | 表情分布 | 关键 takeaway |
+|---|------|------|----------|---------------|
+| 1 | `doc/whiteboard-vs-doc.md` | 思维工具选择(白板 vs 文档) | 全 deadpan | 反复刻陷阱:姿态都"站" / 物件都"低科技机器" |
+| 2 | `doc/why-i-quit-gtd.md` | 工具反思(为什么不用 GTD 了) | 全 deadpan + 3/4 用备选装扮 | 改进:姿态"非站"(蹲/探出/坐/卡住)+ 备选装扮实战 |
+| 3 | `doc/why-i-write-drafts.md` | 写作方法反思(为什么写"废稿") | **2 默认 + 1 思考 + 1 疲惫** | 首次用表情库,验证微表情不影响 deadpan 底色 |
+
+### 实战 3 — why-i-write-drafts(v1.0 表情库首篇实战)
+
+> 完整文章:`doc/why-i-write-drafts.md`
+> 完整 prompt 库(含 4 张图完整 5 段 prompt + 表情选词理由 + 反复刻陷阱预标记):`xiaofan-ink/assets/prompts/articles/why-i-write-drafts.md`
+> 实现时间:v1.1 / 2026-07-17
+
+#### 表情选型决策
+
+| 图 | 表情 | 选这个表情的理由 |
+|---|---|---|
+| 01 废稿堆 | deadpan | 入口段"我就是这样在做",陈述状态不需要情绪 |
+| 02 三个开头 | **思考**(07-thoughtful) | "找哪条路是错的"是审视和归因 |
+| 03 推倒重来 | **疲惫**(09-tired) | "反复试错的累"比 deadpan 更准确 |
+| 04 成本是废稿 | deadpan | 收束段回到冷静陈述结论,deadpan 让结论有清冷理性 |
+
+**情绪节奏**:平 → 思考 → 疲惫 → 平(完整呼吸),没有越走越高。
+
+#### 表情库使用纪律(实战验证有效)
+
+- **同文最多 2-3 种不同表情**(本文用了 2 种 + 2 个默认,符合纪律)
+- **一旦加表情,IP 描述段里 `deadpan calm expression` 必须删掉**(避免和表情词冲突)
+- **表情和备选装扮可独立/叠加使用**(本文未用装扮,纯靠表情切换节奏)
+- **不要每张图都加表情**(入口和收束段用默认,中间段再用表情,避免变表情包轮播)
+
+#### 表情使用 prompt 模式(可直接复用)
+
+```python
+# 实战 3 的 input_file_paths(必传 standard.png)
+input_file_paths = ["xiaofan-ink/assets/ip-reference/standard.png"]
+
+# 图 02 思考表情 IP 描述段
+ip_description = """Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slightly raised right eyebrow, eyes looking down-left, mouth closed, hand-drawn line art) [姿态/动作/物件]."""
+
+# 图 03 疲惫表情 IP 描述段
+ip_description = """Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, drooping brows, eyes half-closed, mouth loose, hand-drawn line art) [姿态/动作/物件]."""
+```
+
+#### 实战 takeaway(给后续实战参考)
+
+- **表情库是 v1.0 才加入的,实战 3 是首篇实战**
+- **4 张图全部一次过,无重出** — 微表情没破坏 deadpan 底色,prompt 替换词直接生效
+- **表情库在实战中是默认能力**:默认 deadpan,需要时加 1-2 种微表情,情绪节奏"平 → X → Y → 平"
+- **同文 2 种不同表情已经够用** — 不需要 5 种都用上,微表情要克制
+
+#### 实战 1 / 2 关键 takeaway(简版)
+
+- **实战 1(whiteboard-vs-doc)**:首次实战,4 张图全用 deadpan,但暴露两个反复刻陷阱 — 姿态都"站" / 物件都"低科技机器"
+- **实战 2(why-i-quit-gtd)**:刻意改掉实战 1 的反复刻陷阱,4 张图覆盖 4 种不同姿态(蹲/探出/坐/卡住)+ 3/4 张用备选装扮(耳机/工具包+笔/笔记本)
+- **实战 3(why-i-write-drafts)**:在实战 1/2 基础上,加入 v1.0 表情库,完成"姿态/装扮/表情"三维度全覆盖
 
 ---
 

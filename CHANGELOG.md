@@ -36,6 +36,12 @@
 - prompt 替换词(`slightly raised right eyebrow, eyes looking down-left` 等)直接生效,没额外 trigger 错误风格
 - 表情库和备选装扮(本篇未用)可独立/叠加使用,互不冲突
 
+**walkthrough 扩展**:
+- `doc/walkthrough.md` 顶部"准备工作"段加表情库提示
+- 新增"7.6 表情库怎么用?"FAQ 段
+- 新增"8. 附录 B:实战案例集"section,含实战 1/2/3 三篇对比表 + 实战 3 表情库实战细节
+- 实战案例集定位:作为后续实战的参考,展示表情库如何从 v0.5 反复刻陷阱 → v0.6 改进 → v1.0 表情库的战绩
+
 ---
 
 ## v1.0 — 2026-07-17(微表情库)
