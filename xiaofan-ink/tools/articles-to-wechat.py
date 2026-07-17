@@ -40,6 +40,14 @@ except ImportError:
     print("⚠️  pyyaml 未装,front matter 用正则解析(也能用)")
     yaml = None
 
+try:
+    import markdown as _markdown
+    from bs4 import BeautifulSoup as _BeautifulSoup
+except ImportError:
+    print("❌ 需要安装 markdown + beautifulsoup4 + lxml:")
+    print("   pip install markdown beautifulsoup4 lxml")
+    sys.exit(1)
+
 
 # ---------- 路径配置 ----------
 
@@ -110,80 +118,115 @@ def parse_front_matter(md_text):
     return meta, body
 
 
-def md_to_wechat_html(md_text, image_url_map):
+def md_to_wechat_html(md_text, image_url_map, accent="#C0392B"):
     """
     把 markdown 转成微信公众号兼容的 HTML。
-    - 图片 `![alt](path)` → `<img src="wechat-url" />`(从 image_url_map 取)
-    - 段落用 <p> 包裹
-    - 标题用 <strong> 加粗
-    - 引用块 > 用 <blockquote>
-    - 水平线 --- 用 <hr>
+
+    走 markdown 库 + bs4 后处理两步:
+    1. markdown.markdown() 转出标准 HTML
+    2. bs4 遍历每个元素,套上 brand style-guide 里的样式
+
+    样式参考 brand/style-guide.md:
+    - 调色板: 墨 #1A1A1A / 红 #C0392B / 橙 #E67E22 / 蓝 #2C5F8D / 米 #F4EFE6 / 灰 #666666
+    - 字号: H1 24px / H2 18px / 正文 16-17px
+    - 行距: 1.85(公众号屏幕小,行距要够松才不累)
+    - 引用块: 米色底 + 红色左竖线
+    - 配图: 居中,不加圆角/阴影
+
+    image_url_map: 本地相对路径 → 微信返回的 url(由 sync_essay 注入)
+    accent: 强调色(strong / blockquote 左边线 / h2 装饰),默认红
     """
-    html_lines = []
-    in_quote = False
-    quote_buf = []
+    # 1. markdown → HTML
+    # 注:不加 smarty,避免把直引号 " 改成花引号 "(style-guide 规定用「」)
+    html = _markdown.markdown(
+        md_text,
+        extensions=["extra", "sane_lists"],
+    )
 
-    def flush_quote():
-        nonlocal in_quote, quote_buf
-        if in_quote and quote_buf:
-            html_lines.append("<blockquote style='border-left: 3px solid #888; padding-left: 12px; color: #555; margin: 12px 0;'>")
-            for q in quote_buf:
-                html_lines.append(f"<p style='margin: 6px 0; line-height: 1.75;'>{inline_md(q)}</p>")
-            html_lines.append("</blockquote>")
-            in_quote = False
-            quote_buf = []
+    # 2. bs4 遍历套样式
+    soup = _BeautifulSoup(html, "lxml")
 
-    def inline_md(text):
-        """处理行内的 **bold** *italic* `code`"""
-        # 图片
-        text = re.sub(
-            r"!\[([^\]]*)\]\(([^)]+)\)",
-            lambda m: f"<img src='{image_url_map.get(m.group(2), m.group(2))}' style='max-width:100%; display:block; margin: 12px auto;' alt='{m.group(1)}' />",
-            text,
+    # 2.1 图片: 把本地路径换成微信 URL
+    for img in soup.find_all("img"):
+        src = img.get("src", "")
+        # 微信编辑器的 img 必须用 https:// 开头,缺省 protocol 的本地路径不显示
+        if src in image_url_map:
+            img["src"] = image_url_map[src]
+        img["style"] = (
+            "max-width: 100%; height: auto; display: block; "
+            "margin: 20px auto; border-radius: 0; box-shadow: none;"
         )
-        # 粗体
-        text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
-        # 斜体
-        text = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
-        # 行内代码
-        text = re.sub(r"`([^`]+)`", r"<code style='background: #f4f4f4; padding: 1px 4px; border-radius: 3px;'>\1</code>", text)
-        return text
+        if not img.get("alt"):
+            img["alt"] = ""
 
-    for line in md_text.split("\n"):
-        line_stripped = line.rstrip()
+    # 2.2 段落
+    for p in soup.find_all("p"):
+        p["style"] = (
+            "margin: 14px 0; line-height: 1.85; font-size: 17px; "
+            "color: #1A1A1A; letter-spacing: 0.3px;"
+        )
 
-        # 空行
-        if not line_stripped:
-            flush_quote()
-            html_lines.append("")
-            continue
+    # 2.3 标题(H1 文章主标题 / H2 段落小标题)
+    for h1 in soup.find_all("h1"):
+        h1.name = "p"  # 公众号 H1 样式不可控,用大号 p
+        h1["style"] = (
+            f"font-size: 24px; font-weight: bold; color: #1A1A1A; "
+            f"line-height: 1.5; margin: 24px 0 20px; padding: 0;"
+        )
+    for h2 in soup.find_all("h2"):
+        h2.name = "p"
+        h2["style"] = (
+            f"font-size: 18px; font-weight: bold; color: #1A1A1A; "
+            f"line-height: 1.6; margin: 28px 0 14px; "
+            f"padding-left: 10px; border-left: 3px solid {accent};"
+        )
 
-        # 引用块
-        if line_stripped.startswith("> "):
-            in_quote = True
-            quote_buf.append(line_stripped[2:])
-            continue
-        elif in_quote:
-            flush_quote()
+    # 2.4 引用块: 米色底 + 红色左竖线
+    for bq in soup.find_all("blockquote"):
+        bq["style"] = (
+            f"background: #F4EFE6; border-left: 3px solid {accent}; "
+            f"padding: 14px 16px; margin: 20px 0; "
+            f"color: #1A1A1A; border-radius: 0;"
+        )
+        for child_p in bq.find_all("p"):
+            child_p["style"] = (
+                "margin: 8px 0; line-height: 1.85; font-size: 16px; "
+                "color: #1A1A1A;"
+            )
 
-        # 水平线
-        if line_stripped == "---":
-            html_lines.append("<hr style='border: none; border-top: 1px solid #ddd; margin: 24px 0;' />")
-            continue
+    # 2.5 水平线
+    for hr in soup.find_all("hr"):
+        hr["style"] = (
+            "border: none; border-top: 1px solid #E5E5E5; "
+            "margin: 32px 0;"
+        )
 
-        # 标题(用粗体替代,因为公众号编辑器 H1/H2 样式不可控)
-        if line_stripped.startswith("# "):
-            html_lines.append(f"<p style='font-size: 18px; font-weight: bold; margin: 24px 0 12px;'>{inline_md(line_stripped[2:])}</p>")
-            continue
-        if line_stripped.startswith("## "):
-            html_lines.append(f"<p style='font-size: 16px; font-weight: bold; margin: 18px 0 8px;'>{inline_md(line_stripped[3:])}</p>")
-            continue
+    # 2.6 行内元素
+    for strong in soup.find_all("strong"):
+        strong["style"] = f"color: {accent}; font-weight: bold;"
+    for em in soup.find_all("em"):
+        em["style"] = "font-style: italic; color: #1A1A1A;"
+    for code in soup.find_all("code"):
+        code["style"] = (
+            "background: #F4F4F4; padding: 1px 6px; "
+            "border-radius: 3px; font-size: 15px; "
+            "color: #1A1A1A; font-family: monospace;"
+        )
+    for a in soup.find_all("a"):
+        a["style"] = f"color: {accent}; text-decoration: none;"
 
-        # 普通段落
-        html_lines.append(f"<p style='margin: 10px 0; line-height: 1.75; font-size: 16px;'>{inline_md(line_stripped)}</p>")
-
-    flush_quote()
-    return "\n".join(html_lines)
+    # 3. 拼接:bs4 输出 + 整段 section style(保证移动端阅读体验)
+    section_style = (
+        "max-width: 100%; padding: 0 4px; "
+        "font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', "
+        "'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
+    )
+    # 拿 body 的 inner 内容(去掉 <html><body> 包装,bs4 给加的)
+    if soup.body:
+        body_html = soup.body.decode_contents()
+    else:
+        body_html = str(soup)
+    return f"<section style='{section_style}'>{body_html}</section>"
 
 
 # ---------- 微信 API 调用 ----------
@@ -347,9 +390,15 @@ def sync_essay(config, slug):
         print(f"   上传 {img.name}...", end=" ")
         try:
             wechat_url = upload_image_for_content(token, img)
+            # 多种 key 都存一份,容忍 markdown 引用风格差异
             image_url_map[local_relpath] = wechat_url
             image_url_map[f"./images/{essay_path.stem}/{img.name}"] = wechat_url
             image_url_map[img.name] = wechat_url
+            # stem 前缀(去掉 -xxx 后缀),让 `01.png` 也能命中 `01-paper-sunk.png`
+            stem = img.stem.split("-")[0]
+            image_url_map[f"images/{essay_path.stem}/{stem}.png"] = wechat_url
+            image_url_map[f"images/{essay_path.stem}/{stem}.jpg"] = wechat_url
+            image_url_map[f"{stem}.png"] = wechat_url
             print(f"✅ {wechat_url[:50]}...")
         except Exception as e:
             print(f"❌ {e}")
