@@ -431,8 +431,12 @@ def sync_essay(config, slug):
     digest = meta.get("digest") or title[:54]
     if len(digest) > 54:
         digest = digest[:54]
+    # 标题不加《》包裹 —— v1.7.1 调整
+    # 原:f"《{title}》"
+    # 公众号编辑器自己会处理标题样式,推送 list 里看的就是纯标题,
+    # 加《》反而显得繁琐/装。
     article = {
-        "title": f"《{title}》",
+        "title": title,
         "author": config.get("author", "小凡"),
         "digest": digest,
         "content": html,

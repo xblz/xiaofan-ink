@@ -6,6 +6,30 @@
 
 ---
 
+## v1.7.1 — 2026-07-17(推送标题去《》)
+
+v1.6 / v1.7 时代 resync 出来的草稿,标题都被脚本包了《》(中文文章标题常用格式)。
+
+**问题**:
+- 公众号推送 list 里看的是纯标题,加《》显得繁琐/装
+- 公众号编辑器自己会处理标题样式,加《》反而干扰
+
+**修复**:`xiaofan-ink/tools/articles-to-wechat.py` 的 `create_draft` 调用,把 `f"《{title}》"` 改成 `title`(直接用 front matter 的 title,不加包裹)。
+
+### 同步结果
+
+| | 草稿 ID | 推送标题 |
+|--|--|--|
+| 000 | `4Qs6oAKkTbuKncYKGGbmXKb-tAhKVrH0Ksv-yqdM5FYzT2AhE8pZHM7zSyLpB9SWW` | 我开了个公众号,叫"草稿本" |
+| 001 | `4Qs6oAKkTbuKncYKGGbmXJ0L0IBrN3HhPKjln7aG20sxiDq1QNFy3p8yp9aEJ0Cm` | 5 年每日计划,我戒了 |
+| 002 | `4Qs6oAKkTbuKncYKGGbmXBX-f9EgrjNyEUv2K1zVxJDy_WoCEVPmWENK8KEaNa4b` | 番茄钟 3 年,我放下了 |
+
+### 用户后续
+
+公众号后台 → 草稿箱 → 删 v1.7 时代那 3 个带《》 的旧草稿,留 v1.7.1 这 3 个干净的。
+
+---
+
 ## v1.7 — 2026-07-17(品牌节奏调整 + 000 重写 + 全文档同步)
 
 把"每周三 1 篇"推翻,改成"想写就写"。**公众号节奏从此不固定**。
