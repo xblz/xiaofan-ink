@@ -237,11 +237,21 @@ def upload_thumb_media(token, file_path):
 
 
 def create_draft(token, articles):
-    """创建草稿(draft/add),返回 draft media_id"""
+    """创建草稿(draft/add),返回 draft media_id。
+    关键:微信公众号 API 期望 UTF-8 JSON,requests 默认 ensure_ascii=True
+    会把中文转成 \\uXXXX,导致公众号编辑器里看到乱码。所以要手动序列化。
+    """
+    import json as _json
     url = "https://api.weixin.qq.com/cgi-bin/draft/add"
     params = {"access_token": token}
     payload = {"articles": articles}
-    r = requests.post(url, params=params, json=payload, timeout=60)
+    r = requests.post(
+        url,
+        params=params,
+        data=_json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        timeout=60,
+    )
     data = r.json()
     if "media_id" not in data:
         raise RuntimeError(f"创建草稿失败: {data}")
@@ -349,11 +359,17 @@ def sync_essay(config, slug):
     print("\n🔄 markdown → HTML...")
     html = md_to_wechat_html(body, image_url_map)
 
-    # 4. 上传封面(用第一张图当 thumb)
+    # 4. 上传封面(优先 cover.png,否则用第一张配图)
     print("\n🖼️  上传封面...")
-    thumb_path = image_files[0]
+    cover_candidates = [
+        images_dir / "cover.png",
+        images_dir / "cover.jpg",
+        images_dir / "00-cover.png",
+    ]
+    cover_path = next((p for p in cover_candidates if p.exists()), image_files[0])
+    print(f"   用 {cover_path.name} 作封面")
     try:
-        thumb_media_id = upload_thumb_media(token, thumb_path)
+        thumb_media_id = upload_thumb_media(token, cover_path)
         print(f"   thumb_media_id: {thumb_media_id}")
     except Exception as e:
         print(f"❌ 上传封面失败: {e}")

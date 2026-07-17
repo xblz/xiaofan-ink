@@ -6,6 +6,33 @@
 
 ---
 
+## v1.5.1 — 2026-07-17(中文编码修复 + 专门封面图)
+
+修 v1.5 的 2 个问题:
+
+### Bug 1:中文乱码
+
+requests `json=payload` 默认 `ensure_ascii=True`,把中文转成 `\uXXXX` 转义字符串。公众号编辑器里看到 `\u300a\u4e3a\u4ec0...` 这种乱码。
+
+**修复**:`create_draft` 改用 `data=json.dumps(payload, ensure_ascii=False).encode('utf-8')` + 显式 `Content-Type: application/json; charset=utf-8` 头。
+
+### Bug 2:没有专门封面图
+
+v1.5 默认用第一张配图(01-paper-sunk.png)作封面,导致"封面"跟"正文图 1"重复。
+
+**修复**:
+1. 脚本加 cover.png 优先检测(支持 `cover.png` / `cover.jpg` / `00-cover.png`)
+2. 用 `image_synthesize` 为 001 + 002 各生成 1 张专门封面图,存到 `doc/essays/images/00X-*/cover.png`
+3. cover 设计:留白更多(给标题位置),核心元素简化,视觉冲击强
+
+**新增 cover 图**:
+- `doc/essays/images/001-why-i-dont-do-daily-plan/cover.png`(小凡从纸堆探出 + 一手举笔)
+- `doc/essays/images/002-focus-boundary/cover.png`(小凡卡在钟形罩里 + 大耳机 + 番茄钟)
+
+**重新同步**:用修复后的脚本重跑 001 + 002,生成新草稿(中文正常,封面是 cover.png)。用户需要在公众号后台**删除旧草稿**。
+
+---
+
 ## v1.5 — 2026-07-17(公众号 API 自动化)
 
 为"小凡的草稿本"公众号接 API 自动化,实现从 essay 到草稿箱的端到端同步。
