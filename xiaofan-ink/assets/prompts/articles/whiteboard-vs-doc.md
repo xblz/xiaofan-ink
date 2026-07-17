@@ -3,12 +3,12 @@
 > 文章:`doc/whiteboard-vs-doc.md`
 > 生成日期:2026-07-16
 > 输入参考图:`.ip-dev/reference.jpg`(原始证件照,v1 阶段)
-> 实际生成图:`doc/images/01-04.png`
+> 实际生成图:`doc/images/whiteboard-vs-doc/01-04.png`
 > 注:v1 阶段用证件照直接生成,后续 v2 改用 `xiaofan-ink/assets/ip-reference/standard.png` 作参考(IP 一致性更好)
 
 ## 01 - 文档的陷阱
 
-**对应图**: `doc/images/01-doc-trap.png`
+**对应图**: `doc/images/whiteboard-vs-doc/01-doc-trap.png`
 **结构类型**: 概念隐喻
 **小凡姿态**: 站着看被擦掉问号的完美文档
 
@@ -18,7 +18,7 @@ Generate a 16:9 horizontal Chinese article illustration on pure white background
 
 ## 02 - 白板的好处
 
-**对应图**: `doc/images/02-whiteboard-better.png`
+**对应图**: `doc/images/whiteboard-vs-doc/02-whiteboard-better.png`
 **结构类型**: 前后对比
 **小凡姿态**: 站中间,身体前倾看白板
 
@@ -28,7 +28,7 @@ Generate a 16:9 horizontal Chinese article illustration on pure white background
 
 ## 03 - 用草图表达
 
-**对应图**: `doc/images/03-three-strokes.png`
+**对应图**: `doc/images/whiteboard-vs-doc/03-three-strokes.png`
 **结构类型**: 隐喻
 **小凡姿态**: 一只手画三笔,另一只手推文档
 
@@ -38,7 +38,7 @@ Generate a 16:9 horizontal Chinese article illustration on pure white background
 
 ## 04 - 过程比结论值钱
 
-**对应图**: `doc/images/04-process-wins.png`
+**对应图**: `doc/images/whiteboard-vs-doc/04-process-wins.png`
 **结构类型**: 隐喻
 **小凡姿态**: 站在天平旁,一只手推天平,另一手指白板
 

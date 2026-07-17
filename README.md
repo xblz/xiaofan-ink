@@ -102,7 +102,7 @@
 
 这些图片是风格校准样例,不是构图模板。使用时应该从当前文章重新发明隐喻,不要照抄这些样例的物件和构图。同一篇文章的多张图,要让小凡的姿态、动作、物件、视角至少有 3 个不同维度在变化,具体见 `xiaofan-ink/references/composition-patterns.md` 的"反复刻规则"段。
 
-> 根目录 `examples/images/` 仍保留原作者 Ian 的 8 张样例图,作为原版视觉风格的版权样例存档,仅供查阅。
+> 原作者 Ian 的 8 张"小黑"样例图已移至 `.ip-dev/legacy-examples/`(gitignored),仅作原版视觉风格存档,不再出现在本仓库的 skill 结构里。
 
 ---
 
@@ -115,19 +115,23 @@
 ├── LICENSE
 ├── NOTICE.md
 ├── doc/
-│   ├── walkthrough.md          ← 完整使用 walkthrough
-│   ├── whiteboard-vs-doc.md    ← 实战第一篇(白板比文档)
-│   ├── why-i-quit-gtd.md       ← 实战第二篇(GTD 反思,v0.6)
-│   └── images/                 ← 实战配图
-└── xiaofan-ink/                ← skill 主目录
+│   ├── walkthrough.md              ← 完整使用 walkthrough
+│   ├── whiteboard-vs-doc.md        ← 实战第一篇(白板比文档)
+│   ├── why-i-quit-gtd.md           ← 实战第二篇(GTD 反思,v0.6)
+│   └── images/                     ← 实战配图(按文章分子目录)
+│       ├── whiteboard-vs-doc/      (4 张)
+│       └── why-i-quit-gtd/         (4 张)
+└── xiaofan-ink/                    ← skill 主目录
     ├── SKILL.md
     ├── agents/
     │   └── openai.yaml
     ├── assets/
-    │   ├── examples/           ← 6 张样例图
-    │   ├── ip-reference/       ← 3 张定稿图 + standard.png
-    │   │   └── variants/       ← 3 张备选装扮
-    │   └── prompts/            ← 实战 + 样例 prompt 库
+    │   ├── examples/               ← 6 张样例图
+    │   ├── ip-reference/           ← 3 张定稿图 + standard.png
+    │   │   └── variants/           ← 6 张备选装扮
+    │   └── prompts/                ← 实战 + 样例 prompt 库
+    │       ├── articles/           ← 实战文章 prompt
+    │       └── skill-samples/      ← skill 样例图 prompt
     └── references/
         ├── style-dna.md
         ├── xiaofan-ip.md

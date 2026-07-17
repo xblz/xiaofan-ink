@@ -24,7 +24,7 @@
 
 **完整、规整、自洽的文档,把最有价值的部分全抹掉了。**
 
-![文档的陷阱:把"?"擦掉,留下完美但无用的文档](images/01-doc-trap.png)
+![文档的陷阱:把"?"擦掉,留下完美但无用的文档](images/whiteboard-vs-doc/01-doc-trap.png)
 
 ---
 
@@ -38,7 +38,7 @@
 
 **结论是要付费的,过程是免费的。但过程比结论更值钱。**
 
-![白板的好处:过程比结论值钱](images/02-whiteboard-better.png)
+![白板的好处:过程比结论值钱](images/whiteboard-vs-doc/02-whiteboard-better.png)
 
 ---
 
@@ -58,7 +58,7 @@
 
 你会发现,你脑子里那些"没想清楚"的部分,其实用三笔就能讲明白。
 
-![用草图表达:一段话 vs 三笔](images/03-three-strokes.png)
+![用草图表达:一段话 vs 三笔](images/whiteboard-vs-doc/03-three-strokes.png)
 
 ---
 
@@ -70,7 +70,7 @@
 
 **过程比结论值钱,草图比规整值钱,留个问号比写个答案值钱。**
 
-![过程比结论值钱:天平上白板翘起,文档沉下去](images/04-process-wins.png)
+![过程比结论值钱:天平上白板翘起,文档沉下去](images/whiteboard-vs-doc/04-process-wins.png)
 
 ---
 

@@ -3,14 +3,14 @@
 > 文章:`doc/why-i-quit-gtd.md`
 > 生成日期:2026-07-17
 > 输入参考图:`xiaofan-ink/assets/ip-reference/standard.png`(v2 阶段)
-> 实际生成图:`doc/images/gtd-01-04.png`
+> 实际生成图:`doc/images/why-i-quit-gtd/01-04.png`
 > 关键改进:小凡姿态全部"非站"化 + 3/4 张图用备选装扮 + 物件变化
 
 ---
 
 ## 01 - GTD 假设的"理想用户"
 
-**对应图**: `doc/images/gtd-01.png`
+**对应图**: `doc/images/why-i-quit-gtd/01.png`
 **结构类型**: 概念隐喻
 **小凡姿态**: **蹲** 在 GTD 机器前,双手试图挡住喷出的清单
 **备选装扮**: 无
@@ -21,7 +21,7 @@ Generate a 16:9 horizontal Chinese article illustration on pure white background
 
 ## 02 - GTD 的反噬
 
-**对应图**: `doc/images/gtd-02.png`
+**对应图**: `doc/images/why-i-quit-gtd/02.png`
 **结构类型**: 角色状态
 **小凡姿态**: **半个身子探出** 清单山
 **备选装扮**: **戴耳机** (反讽"用耳机逃避问题")
@@ -32,7 +32,7 @@ Generate a 16:9 horizontal Chinese article illustration on pure white background
 
 ## 03 - 我现在的做法
 
-**对应图**: `doc/images/gtd-03.png`
+**对应图**: `doc/images/why-i-quit-gtd/03.png`
 **结构类型**: 方法论 / 角色状态
 **小凡姿态**: **坐** 在地上,腿交叉
 **备选装扮**: **围工具包 + 拿粗笔**
@@ -43,7 +43,7 @@ Generate a 16:9 horizontal Chinese article illustration on pure white background
 
 ## 04 - 结论
 
-**对应图**: `doc/images/gtd-04.png`
+**对应图**: `doc/images/why-i-quit-gtd/04.png`
 **结构类型**: 概念隐喻
 **小凡姿态**: **卡在** 坏掉的 GTD 机器上
 **备选装扮**: **拿小笔记本**

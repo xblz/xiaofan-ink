@@ -22,7 +22,7 @@
   - 验证 v0.5 改进:姿态全部"非站" + 3/4 用备选装扮
   - 4 张图核心物件都不同(GTD 机器/清单山/3 张纸/坏 GTD 机器)
 - **实战 prompt 库扩充**:
-  - 新增 `real-articles/why-i-quit-gtd.md`(v2 实战 prompt + 实战复盘)
+  - 新增 `articles/why-i-quit-gtd.md`(v2 实战 prompt + 实战复盘)
   - 对比第一篇实战:姿态 1.5 维 → 4 维,备选 0/4 → 3/4
 
 ## v0.5 — 2026-07-17(全面优化迭代)
@@ -30,7 +30,7 @@
 全部 7 项优化一次性合并(根据用户优先级判断:全部一起做)。
 
 - **P0 IP 一致性**: 新增 `xiaofan-ink/assets/ip-reference/standard.png`(标准像,从 `head-think.png` 复制)。后续所有新图用 standard.png 作 input_file_paths,不再直接用原始证件照。13 张旧图(v1)保留,在 prompts 文件里标注。
-- **P1 实战 prompt 库**: 新建 `xiaofan-ink/assets/prompts/` 目录,分 `real-articles/` 和 `examples/` 两类。实战文章的 4 个 prompt + 6 张样例图 prompt 都存档,后续直接复用。
+- **P1 实战 prompt 库**: 新建 `xiaofan-ink/assets/prompts/` 目录,分 `articles/` 和 `skill-samples/` 两类。实战文章的 4 个 prompt + 6 张样例图 prompt 都存档,后续直接复用。
 - **P2 反复刻规则实战验证**: `composition-patterns.md` 加"实战反复刻陷阱"段,记录第一篇实战(白板 vs 文档)的两个反复刻陷阱(姿态都偏站 / 物件都偏低科技机器)+ 避免方法。
 - **P3 CHANGELOG**: 创建本文件。
 - **P4 IP 备选装扮**: `xiaofan-ip.md` 加"备选装扮"段(眼镜/白板笔/工具包)。生成 3 张备选图到 `xiaofan-ink/assets/ip-reference/variants/`。
@@ -64,7 +64,7 @@
 - 项目名 `ian-xiaohei-illustrations` → `xiaofan-ink`(小凡墨水)
 - 同步 GitHub 仓库名为 `xiaofan-ink`,本地 `.git/config` 同步
 - `references/xiaohei-ip.md` 改名为 `xiaofan-ip.md` 并重写
-- 同步更新 `prompt-template.md` / `composition-patterns.md` / `qa-checklist.md` / `SKILL.md` / `openai.yaml` / `README.md` / `NOTICE.md` / `examples/prompts.md`
+- 同步更新 `prompt-template.md` / `composition-patterns.md` / `qa-checklist.md` / `SKILL.md` / `openai.yaml` / `README.md` / `NOTICE.md` / `examples/prompts.md`(已移到 `.ip-dev/legacy-examples/legacy-prompts.md`)
 - 暂存原 14 张样例图到 `.ip-dev/legacy-examples/`(gitignored)
 - 新增 6 张小凡样例图到 `xiaofan-ink/assets/examples/`(覆盖 6 种结构类型)
 - 新增 3 张小凡 IP 定稿图到 `xiaofan-ink/assets/ip-reference/`(头部/半身/场景)

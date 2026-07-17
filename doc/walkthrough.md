@@ -306,9 +306,9 @@ assets/<article-slug>-illustrations/
 
 `xiaofan-ink/assets/prompts/` 目录下:
 
-- `real-articles/` — 实战验证过的 prompt(比如 `whiteboard-vs-doc.md`),直接复用
-- `examples/` — 6 张 skill 样例图的 prompt(已通过 QA 的"做什么可以"参考库)
-- 实战时优先复制 `real-articles/` 下的对应文章 prompt,改主题/结构/标注即可,不要从零写
+- `articles/` — 实战验证过的 prompt(比如 `whiteboard-vs-doc.md`),直接复用
+- `skill-samples/` — 6 张 skill 样例图的 prompt(已通过 QA 的"做什么可以"参考库)
+- 实战时优先复制 `articles/` 下的对应文章 prompt,改主题/结构/标注即可,不要从零写
 
 ### 7.1 文章里没有明显认知锚点怎么办?
 
