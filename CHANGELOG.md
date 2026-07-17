@@ -6,6 +6,38 @@
 
 ---
 
+## v0.9 — 2026-07-17(prompt 库对齐"线稿版的我"基准)
+
+基于 v0.8 确立的"线稿版的我"IP 风格,统一重写 prompt 库。
+
+**新增**:
+- `xiaofan-ink/assets/prompts/_standard-ip-description.md` — 小凡 IP 标准描述(头部/身体/线条/颜色/标准 prompt 段)
+  - 明确"线稿版的我,不是极简 stick figure"
+  - 列出反面描述(不要写进 prompt 的:minimalist/whiteboard quick sketch/no color fill 等)
+  - 列出标准 prompt 段(开头 + IP 描述),后续所有实战 prompt 引用
+
+**重写**:
+- `xiaofan-ink/references/prompt-template.md` — 主模板
+  - 拆分为 5 段(风格+IP/变量/构图/标注/约束)
+  - 明确"必须用 standard.png 作 input_file_paths"
+  - 引用标准 IP 描述
+- `xiaofan-ink/assets/prompts/articles/whiteboard-vs-doc.md` — 实战 1 prompt
+  - 改用 standard.png(原 reference.jpg)
+  - 引用标准 IP 描述
+- `xiaofan-ink/assets/prompts/articles/why-i-quit-gtd.md` — 实战 2 prompt
+  - 改用 5 段结构(跟实战 1 对齐)
+  - 引用标准 IP 描述
+- `xiaofan-ink/assets/prompts/skill-samples/all-6-samples.md` — 6 样例 prompt
+  - 改用 standard.png
+  - 改用 5 段结构
+  - 引用标准 IP 描述
+
+**统一原则**:
+- 所有实战 prompt 用同一开头段("Generate a 16:9 ... casual hand-drawn line illustration ...")
+- 所有实战 prompt 用同一 IP 描述段("Xiaofan is a loose line-drawn self-portrait with recognizable features ...")
+- 所有实战 prompt 引用 standard.png
+- 配色统一 warm-ink 4 色(黑/红/橙/蓝)
+
 ## v0.8 — 2026-07-17(IP 形象回滚到 1a25ff2 v0.4 基准)
 
 **问题发现**:
