@@ -426,7 +426,11 @@ def sync_essay(config, slug):
 
     # 5. 创建草稿
     print("\n📝 创建草稿...")
-    digest = meta.get("title", "")[:54]  # 摘要,最多 54 字
+    # 摘要优先级: front matter 的 digest 字段 > title[:54]
+    # 公众号个人订阅号 digest 最多 54 字,超出会被静默截断
+    digest = meta.get("digest") or title[:54]
+    if len(digest) > 54:
+        digest = digest[:54]
     article = {
         "title": f"《{title}》",
         "author": config.get("author", "小凡"),

@@ -1,15 +1,16 @@
 ---
-title: 为什么我不再做每日计划
+title: 5 年每日计划,我戒了
 date: "2026-07-17"
 slug: why-i-dont-do-daily-plan
 n: "001"
+digest: 列了 5 年,纸划满了,人空了。后来换:每天 3 件 + 明确"不做"。反而做得更多。
 expressions: 2 default + 1 confused + 1 satisfied
 outfits: 1/4 用(咖啡杯)
 poses: 4 different(卡在纸堆 / 洞里伸手 / 蹲角落 / 回头看)
 topic: 工具反思 — 节奏类
 ---
 
-# 为什么我不再做每日计划
+# 5 年每日计划,我戒了
 
 我做了五年每日计划。后来不做了。
 
