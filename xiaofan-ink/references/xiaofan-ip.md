@@ -106,8 +106,25 @@
 
 `assets/ip-reference/` 目录下保存定稿参考图:
 
+**定稿参考(3 张,基础姿态校准)**:
 - `head-think.png`:1:1 头部,托下巴思考的速写感头部。
 - `halfbody-climb.png`:3:4 半身,从纸箱爬出来回头看的瞬间。
 - `scene-stuck.png`:16:9 配图场景,卡在机器里抬头看画外。
+- `standard.png`:从 `head-think.png` 派生的"标准 IP 形象",所有实战生图都用此作 input_file_paths(参考输入)。
 
-这些是风格校准样例,提供线条密度、留白比例、姿态松散度的参考。不要直接复用构图,每次都从当前文章重新发明姿态。
+**备选装扮 variants(6 张,v0.5-v0.6 加入)**:
+- `variants/01-glasses.png` 圆框眼镜
+- `variants/02-pen.png` 白板粗笔
+- `variants/03-toolbelt.png` 帆布工具包
+- `variants/04-headphones.png` 大耳机
+- `variants/05-coffee.png` 咖啡杯
+- `variants/06-notebook.png` 小笔记本
+
+**微表情 variants(5 张,v1.0 加入)**:
+- `variants/07-thoughtful.png` 思考
+- `variants/08-confused.png` 困惑
+- `variants/09-tired.png` 疲惫
+- `variants/10-surprised.png` 惊讶
+- `variants/11-satisfied.png` 满足
+
+这些是风格校准样例,提供线条密度、留白比例、姿态松散度、装扮细节、表情变化幅度的参考。不要直接复用构图,每次都从当前文章重新发明姿态。

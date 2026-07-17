@@ -79,8 +79,10 @@
 - 主题选定:从"思维方法"里挑了"白板 vs 文档"这个角度
 - 锚点提炼:每段一个核心判断(抹掉、白板好、三笔、过程值钱)
 - 结构选择:概念隐喻 + 前后对比 + 隐喻
-- 小凡姿态:4 张图各不相同(站/看/画/推),不重复
+- 小凡姿态:4 张图主要是"站+看/做"(v0.4 实战,姿态变化不够,改进空间大,详见 prompt 库复盘)
+- 备选装扮:0/4 用(实战 1 时期还没加入装扮库)
+- 表情:全 deadpan 默认(实战 1 时期还没加入表情库,v1.0+ 才有)
 - 配色:温暖墨水感,黑主 + 蓝(过程/系统) + 橙(动作) + 灰(规整/沉)
 - QA:过 16:9、白底、小凡核心动作、留白、≤8 标注
 
-具体 shot list 和 prompt 详见 `xiaofan-ink/references/` 下的文件。
+具体 shot list 和 prompt 详见 `xiaofan-ink/assets/prompts/articles/whiteboard-vs-doc.md`,反复刻陷阱复盘见 `xiaofan-ink/references/composition-patterns.md` 的"实战反复刻陷阱"段。

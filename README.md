@@ -14,7 +14,7 @@
 
 它不是通用插画 prompt,也不是 PPT 信息图模板。它的核心目标是:先理解文章里的认知锚点,再把其中一个判断、流程、结构、状态或隐喻,变成一张有记忆点的 16:9 手绘解释图。
 
-默认视觉 IP 是"小凡":一个细长单眼皮、碎短发、薄唇、平静表情的年轻亚洲男性,基于真人手绘风格化转译,保持白板速写感的线稿气质。小凡不是吉祥物,不是贴纸,也不是站在角落里的装饰物,而是正在认真参与系统运转的荒诞工作者。
+默认视觉 IP 是"小凡":一个细长单眼皮、碎短发、薄唇、**默认死板冷静**(v1.0+ 表情库可在 prompt 里切换 1-2 种微表情,如思考/疲惫/满足),基于真人手绘风格化转译,保持白板速写感的线稿气质。小凡不是吉祥物,不是贴纸,也不是站在角落里的装饰物,而是正在认真参与系统运转的荒诞工作者。
 
 一句话:**让 AI 不只是"配一张图",而是把文章里的一个关键认知动作画出来。**
 
@@ -115,12 +115,14 @@
 ├── LICENSE
 ├── NOTICE.md
 ├── doc/
-│   ├── walkthrough.md              ← 完整使用 walkthrough
-│   ├── whiteboard-vs-doc.md        ← 实战第一篇(白板比文档)
-│   ├── why-i-quit-gtd.md           ← 实战第二篇(GTD 反思,v0.6)
+│   ├── walkthrough.md              ← 完整使用 walkthrough(v1.1 含表情库案例)
+│   ├── whiteboard-vs-doc.md        ← 实战第一篇(v0.4 白板比文档)
+│   ├── why-i-quit-gtd.md           ← 实战第二篇(v0.6 GTD 反思)
+│   ├── why-i-write-drafts.md       ← 实战第三篇(v1.1 写废稿 + 表情库首篇)
 │   └── images/                     ← 实战配图(按文章分子目录)
 │       ├── whiteboard-vs-doc/      (4 张)
-│       └── why-i-quit-gtd/         (4 张)
+│       ├── why-i-quit-gtd/         (4 张)
+│       └── why-i-write-drafts/     (4 张)
 └── xiaofan-ink/                    ← skill 主目录
     ├── SKILL.md
     ├── agents/
@@ -128,19 +130,20 @@
     ├── assets/
     │   ├── examples/               ← 6 张样例图
     │   ├── ip-reference/           ← 3 张定稿图 + standard.png
-    │   │   └── variants/           ← 6 张备选装扮
+    │   │   └── variants/           ← 11 张(6 张备选装扮 + 5 张微表情)
     │   └── prompts/                ← 实战 + 样例 prompt 库
-    │       ├── articles/           ← 实战文章 prompt
-    │       └── skill-samples/      ← skill 样例图 prompt
+    │       ├── _standard-ip-description.md
+    │       ├── articles/           ← 实战文章 prompt(3 篇)
+    │       └── skill-samples/      ← skill 样例图 prompt(6 张)
     └── references/
         ├── style-dna.md
-        ├── xiaofan-ip.md
+        ├── xiaofan-ip.md           ← 包含备选装扮 + 表情库
         ├── composition-patterns.md
-        ├── prompt-template.md
+        ├── prompt-template.md      ← 包含表情选择 guidance
         └── qa-checklist.md
 ```
 
-更详细的使用流程见 `doc/walkthrough.md`,实战示例见 `doc/whiteboard-vs-doc.md`。
+更详细的使用流程见 `doc/walkthrough.md`,实战示例默认从 `doc/whiteboard-vs-doc.md` 开始看。
 
 ---
 

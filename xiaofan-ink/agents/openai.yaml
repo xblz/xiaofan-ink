@@ -1,6 +1,6 @@
 interface:
   display_name: "小凡配图"
   short_description: "为中文文章生成怪诞清爽、有小凡IP的正文配图资产"
-  default_prompt: "Use $xiaofan-ink to 为这篇中文文章设计并生成几张小凡怪诞正文配图。"
+  default_prompt: "Use $xiaofan-ink to 为这篇中文文章设计并生成几张小凡怪诞正文配图。默认小凡保持 deadpan 冷静表情,如果文章段落需要 1 度情绪传递,可在 prompt 里加 1-2 种微表情(思考/困惑/疲惫/惊讶/满足),同文最多 2-3 种。"
 policy:
   allow_implicit_invocation: true

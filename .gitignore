@@ -1,5 +1,8 @@
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
 
 # Local generated outputs
 generated/
