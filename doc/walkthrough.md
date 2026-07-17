@@ -302,6 +302,14 @@ assets/<article-slug>-illustrations/
 
 ## 7. 常见问题
 
+### 7.0 Prompt 库在哪?
+
+`xiaofan-ink/assets/prompts/` 目录下:
+
+- `real-articles/` — 实战验证过的 prompt(比如 `whiteboard-vs-doc.md`),直接复用
+- `examples/` — 6 张 skill 样例图的 prompt(已通过 QA 的"做什么可以"参考库)
+- 实战时优先复制 `real-articles/` 下的对应文章 prompt,改主题/结构/标注即可,不要从零写
+
 ### 7.1 文章里没有明显认知锚点怎么办?
 
 只写 1-3 张图,或者干脆不配图。一张不配图的文章,比强行配 6 张烂图要好。

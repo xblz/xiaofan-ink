@@ -14,17 +14,16 @@ Author links:
 - Website: <https://www.ianneo.xyz/opc>
 - X/Twitter: <https://x.com/ianneo_ai>
 
-## Fork 声明 (本仓库)
+## 关于本仓库(本 fork)
 
-本仓库 fork 自 [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations),作为私有项目自用,不公开发布。
+本仓库 fork 自 [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations),作为**私有项目自用**,不公开发布。
 
-主要修改 (2026-07-16):
+主要修改项的完整记录见 `CHANGELOG.md`,核心改动:
 
-- **视觉 IP 替换**: 从原作者的"小黑"(黑色实心小怪物)替换为"小凡"(基于真人面部特征风格化转译的年轻亚洲男性,细长单眼皮、碎短发、薄唇、平静表情,保持白板速写感线稿气质)
-- **项目名**: 从 `ian-xiaohei-illustrations` 改为 `xiaofan-ink`(小凡墨水)
-- **references 重组**: 将原 `references/xiaohei-ip.md` 改名为 `xiaofan-ip.md` 并重写,基于新 IP 重新设计外形、动作库、禁忌、反复刻规则
-- **样例图处理**: 原 `xiaofan-ink/assets/examples/` 中的 14 张样例图(原 IAN 用"小黑"生成)已移至 `.ip-dev/legacy-examples/` 暂存,不再作为本 skill 的参考样例;新增 `xiaofan-ink/assets/ip-reference/` 作为小凡 IP 的定稿参考图(3 张:头部/半身/场景)
-- **风格层保留**: `style-dna.md`、`composition-patterns.md` 的整体结构(分层、避免 PPT、留白规则、颜色克制)与原作者编排保持一致,只针对新 IP 重写具体描述
-- **根目录 `examples/images/`**: 仍保留原作者的 14 张样例图,作为原始 skill 的版权样例,仅供查阅;如未来要公开,需考虑下架
+- 视觉 IP 替换:"小黑" → "小凡"(基于真人面部特征风格化转译)
+- 项目名:`ian-xiaohei-illustrations` → `xiaofan-ink`
+- 5 个 references 全部重写以匹配新 IP
+- 配色方案升级为温暖墨水感(4 色具体 HEX)
+- 新增 walkthrough 文档 + 实战示例文章 + prompts 库
 
-风格设计的整体结构与编排(分层 references、按需读取、shot-list 优先)归原作者 Ian 所有,沿 MIT 协议发布;本 fork 在 MIT 条款下继续发布。
+风格设计的整体结构(分层 references、按需读取、shot-list 优先)归原作者 Ian 所有,沿 MIT 协议发布;本 fork 在 MIT 条款下继续发布。
