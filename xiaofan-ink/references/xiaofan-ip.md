@@ -59,6 +59,9 @@
 - **圆框眼镜**:细金属框或塑料框,适合思考、阅读、检查细节的场景。`assets/ip-reference/variants/01-glasses.png` 参考。
 - **白板粗笔**:手握一支粗马克笔/白板笔,适合"画/标注/写"场景。`assets/ip-reference/variants/02-pen.png` 参考。
 - **帆布工具包**:腰间系一个简单帆布工具包,里面露出扳手/螺丝刀/卷尺,适合"操作/修理/装机器"场景。`assets/ip-reference/variants/03-toolbelt.png` 参考。
+- **大耳机**:头戴一副简单的 over-ear 耳机,适合"专注/隔离/听"场景,或者"用耳机逃避问题" 的反讽场景。`assets/ip-reference/variants/04-headphones.png` 参考。
+- **咖啡杯**:手握一只简单的咖啡杯,适合"慢节奏/思考/休息"场景。`assets/ip-reference/variants/05-coffee.png` 参考。
+- **小笔记本**:手握一本翻开的笔记本 + 一支笔,适合"记录/审视/反思"场景。`assets/ip-reference/variants/06-notebook.png` 参考。
 
 > 备选装扮库会持续扩充。新增的备选装扮同步在 `assets/ip-reference/variants/` 下加图,并在本段加一行说明。
 

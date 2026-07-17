@@ -6,6 +6,25 @@
 
 ---
 
+## v0.6 — 2026-07-17(13 张图重出 + 实战第二篇 + 新备选)
+
+- **13 张旧图 v1 → v2 重出**:
+  - 3 张 IP 定稿图(`head-think` / `halfbody-climb` / `scene-stuck`):基于 `standard.png` 重出,脸一致性提升
+  - 6 张样例图(`01-chaos-to-focus` 到 `06-trust-bridge`):基于 `standard.png` 重出
+  - 4 张实战第一篇(`01-doc-trap` 到 `04-process-wins`):基于 `standard.png` 重出 + **刻意"非站"姿态**(蹲/探出/坐/卡住)
+- **3 张新备选装扮**(`xiaofan-ink/assets/ip-reference/variants/`):
+  - `04-headphones.png`(大耳机 — 专注/逃避场景)
+  - `05-coffee.png`(咖啡杯 — 慢节奏/思考场景)
+  - `06-notebook.png`(小笔记本 — 记录/反思场景)
+  - `xiaofan-ip.md` 备选装扮段扩充
+- **第二篇实战文章**:`doc/why-i-quit-gtd.md` + 4 张配图(`gtd-01-04.png`)
+  - 主题:为什么我不再用 GTD 了(工具反思)
+  - 验证 v0.5 改进:姿态全部"非站" + 3/4 用备选装扮
+  - 4 张图核心物件都不同(GTD 机器/清单山/3 张纸/坏 GTD 机器)
+- **实战 prompt 库扩充**:
+  - 新增 `real-articles/why-i-quit-gtd.md`(v2 实战 prompt + 实战复盘)
+  - 对比第一篇实战:姿态 1.5 维 → 4 维,备选 0/4 → 3/4
+
 ## v0.5 — 2026-07-17(全面优化迭代)
 
 全部 7 项优化一次性合并(根据用户优先级判断:全部一起做)。

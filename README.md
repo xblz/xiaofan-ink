@@ -116,7 +116,8 @@
 ├── NOTICE.md
 ├── doc/
 │   ├── walkthrough.md          ← 完整使用 walkthrough
-│   ├── whiteboard-vs-doc.md    ← 实战示例文章
+│   ├── whiteboard-vs-doc.md    ← 实战第一篇(白板比文档)
+│   ├── why-i-quit-gtd.md       ← 实战第二篇(GTD 反思,v0.6)
 │   └── images/                 ← 实战配图
 └── xiaofan-ink/                ← skill 主目录
     ├── SKILL.md
