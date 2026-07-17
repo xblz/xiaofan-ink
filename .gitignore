@@ -18,3 +18,12 @@ dist/
 
 # IP development scratch space (reference photo, candidates, legacy examples)
 .ip-dev/
+
+# WeChat API credentials (local only, never commit)
+xiaofan-ink/tools/config.json
+xiaofan-ink/tools/.token_cache.json
+
+# Python venv
+.venv/
+__pycache__/
+*.pyc

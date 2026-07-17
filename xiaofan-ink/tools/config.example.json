@@ -1,0 +1,14 @@
+{
+  "_comment": "公众号配置模板。复制本文件为 config.json,填入真实凭证。config.json 在 .gitignore 中,不要提交。",
+  "_docs": "凭证获取: mp.weixin.qq.com → 开发 → 基本配置 → 公众号开发信息",
+
+  "appid": "你的 AppID(以 wx 开头)",
+  "appsecret": "你的 AppSecret",
+  "author": "小凡",
+
+  "_optional": {
+    "source_url": "原文链接(可选,如 GitHub 仓库 URL)",
+    "thumb_strategy": "first",  // first=第一张图作封面, last=最后一张
+    "auto_publish": false  // 是否自动发布(需要群发权限)
+  }
+}

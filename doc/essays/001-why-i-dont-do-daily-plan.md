@@ -1,8 +1,8 @@
 ---
 title: 为什么我不再做每日计划
-date: 2026-07-17
+date: "2026-07-17"
 slug: why-i-dont-do-daily-plan
-n: 001
+n: "001"
 expressions: 2 default + 1 confused + 1 satisfied
 outfits: 1/4 用(咖啡杯)
 poses: 4 different(卡在纸堆 / 洞里伸手 / 蹲角落 / 回头看)

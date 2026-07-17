@@ -1,8 +1,8 @@
 ---
 title: 专注力的边界
-date: 2026-07-17
+date: "2026-07-17"
 slug: focus-boundary
-n: 002
+n: "002"
 expressions: 3 default + 1 confused + 1 satisfied (3 种,5 张图)
 outfits: 1/5 用(咖啡杯,只在图 04)
 poses: 5 different(卡钟形罩 / 坐空桌 / 卡门槛 / 端咖啡 / 站桌)

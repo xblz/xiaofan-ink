@@ -6,6 +6,66 @@
 
 ---
 
+## v1.5 — 2026-07-17(公众号 API 自动化)
+
+为"小凡的草稿本"公众号接 API 自动化,实现从 essay 到草稿箱的端到端同步。
+
+**新增 `xiaofan-ink/tools/` 目录**:
+- `articles-to-wechat.py` — 主脚本(11KB,~330 行)
+  - 读 `doc/essays/00X-*.md` + front matter
+  - 读配图目录 `doc/essays/images/00X-*/`
+  - 获取/缓存 access_token(2 小时过期)
+  - 上传所有配图到"图文消息内图片"API(获取微信 URL)
+  - markdown → 微信公众号兼容 HTML(图片用微信 URL 替换)
+  - 上传第一张图作封面(永久素材,thumb_media_id)
+  - 创建草稿(draft/add)
+  - 返回 draft_media_id,公众号后台手动群发/定时
+- `config.example.json` — 配置模板(填 AppID/AppSecret,git 跟踪)
+- `config.json` — **本地凭证文件(包含真实 AppID/AppSecret,gitignored)**
+- `.token_cache.json` — access_token 缓存(gitignored)
+- `README.md` — 使用说明 + 故障排查
+
+**微信 API 集成要点**:
+- API 基础 URL: `api.weixin.qq.com/cgi-bin/*`
+- access_token: 2 小时过期,本地缓存自动复用
+- 图片上传:图文消息内图片 API(`media/uploadimg`)返回 URL,永久素材 API(`material/add_material`)返回 media_id
+- 草稿创建: `draft/add` API,content 字段是 HTML(不是 markdown)
+
+**公众号凭证**:
+- AppID: `wxa1b727ef169d0b3e`(本地 `config.json`)
+- AppSecret: 本地 `config.json` 保存,git 忽略
+- 状态:已申请、已加白名单、API 连接测试通过
+- 公众号类型:个人订阅号(每天可群发 1 次,需要手动)
+
+**实战验证**:
+- 001 essay 同步成功(草稿 ID: `4Qs6oAKtTbuKncYKGGbmXF8noMWHjrkPyB5GlIKLbz9dB3wV6yFl6dIVEvENvCJF`)
+- 002 essay 同步成功(草稿 ID: `4Qs6oAKtTbuKncYKGGbmXDThxtITnZwYu0gteQuou0Cezn0xqmWuk8Shida1JxHe`)
+- SERIES-STATE 状态更新:两篇都是 "✅ 草稿已创建(待手动群发)"
+
+**front matter 修复**:
+- `n: 001` → `n: "001"`(加引号)让 yaml 保留为字符串
+- `date: 2026-07-17` → `date: "2026-07-17"` 同理
+- 避免 yaml 把 "001" 解析成 int 1 导致前导 0 丢失
+
+**`.gitignore` 新增**:
+```
+xiaofan-ink/tools/config.json
+xiaofan-ink/tools/.token_cache.json
+```
+
+**安全纪律**:
+- 真实 AppID/AppSecret 永远不进 git
+- 凭证丢失/泄露:立刻去公众号后台"重置 AppSecret"
+- 跑脚本前确认 `config.json` 没被 commit
+
+**后续可选扩展**:
+- 公众号 API 自动化群发(需要高级群发权限,个人订阅号没有)
+- 多平台同步(知乎/小红书/Newsletter)
+- 自动定时发布(Cron + 脚本)
+- 数据看板(阅读/在看)
+
+---
+
 ## v1.4 — 2026-07-17(公众号"小凡的草稿本" brand 资源)
 
 为微信公众号申请做准备,建立完整 brand 资源库,跟 xiaofan-ink skill 内容库解耦。
