@@ -114,11 +114,26 @@
 ├── CHANGELOG.md
 ├── LICENSE
 ├── NOTICE.md
+├── brand/                          ← 【v1.4+】公众号"小凡的草稿本" brand 资源
+│   ├── README.md                   ← 公众号基础信息 + 简介
+│   ├── avatar.png                  ← 公众号头像
+│   ├── welcome.md                  ← 关注欢迎语 + 关键词自动回复
+│   ├── menu.md                     ← 公众号自定义菜单
+│   └── style-guide.md              ← 视觉规范(配色/字体/排版/封面)
 ├── doc/
 │   ├── walkthrough.md              ← 完整使用 walkthrough(v1.1 含表情库案例)
+│   ├── CREATION-PLAN.md            ← 长期创作规范(v1.2+)
+│   ├── SERIES-STATE.md             ← 防重复数据库 + 轮换状态(v1.2+)
 │   ├── whiteboard-vs-doc.md        ← 实战第一篇(v0.4 白板比文档)
 │   ├── why-i-quit-gtd.md           ← 实战第二篇(v0.6 GTD 反思)
 │   ├── why-i-write-drafts.md       ← 实战第三篇(v1.1 写废稿 + 表情库首篇)
+│   ├── essays/                     ← 《小凡墨水周记》正式系列(v1.2+)
+│   │   ├── README.md               ← 系列说明
+│   │   ├── 001-why-i-dont-do-daily-plan.md
+│   │   ├── 002-focus-boundary.md
+│   │   └── images/
+│   │       ├── 001-why-i-dont-do-daily-plan/  (4 张)
+│   │       └── 002-focus-boundary/             (5 张)
 │   └── images/                     ← 实战配图(按文章分子目录)
 │       ├── whiteboard-vs-doc/      (4 张)
 │       ├── why-i-quit-gtd/         (4 张)
@@ -133,7 +148,7 @@
     │   │   └── variants/           ← 11 张(6 张备选装扮 + 5 张微表情)
     │   └── prompts/                ← 实战 + 样例 prompt 库
     │       ├── _standard-ip-description.md
-    │       ├── articles/           ← 实战文章 prompt(3 篇)
+    │       ├── articles/           ← 实战文章 prompt(实战 1-3 + 系列 001/002 共 5 篇)
     │       └── skill-samples/      ← skill 样例图 prompt(6 张)
     └── references/
         ├── style-dna.md
@@ -143,7 +158,7 @@
         └── qa-checklist.md
 ```
 
-更详细的使用流程见 `doc/walkthrough.md`,实战示例默认从 `doc/whiteboard-vs-doc.md` 开始看。
+更详细的使用流程见 `doc/walkthrough.md`,实战示例默认从 `doc/whiteboard-vs-doc.md` 开始看。**正式发布内容**见 `doc/essays/`,公众号 brand 资源见 `brand/`。
 
 ---
 
