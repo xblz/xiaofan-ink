@@ -65,6 +65,41 @@ input_file_paths = ["xiaofan-ink/assets/ip-reference/standard.png"]
 
 ---
 
+## 表情选择(可选用,默认 deadpan 即可)
+
+> 详细表情库见 `xiaofan-ink/references/xiaofan-ip.md` 表情库段。prompt 用词速查见 `assets/prompts/_standard-ip-description.md` 表情选项表。
+
+**默认**:IP 描述段里写 `deadpan calm expression`。绝大多数场景用这个。
+
+**什么时候用表情**:
+- 当这张图的核心意思是"小凡在某个情绪中"(如:突然想通、发现 bug、做完收工)→ 在 IP 描述段里把 `deadpan calm expression` 替换为对应微表情词
+- 当这张图的核心意思是"小凡在做某件事"(如:搬素材、拉线、卡住)→ 保持 deadpan,不要乱加情绪
+
+**表情使用纪律**:
+- 同一篇文章多张图,最多 2-3 种不同表情;否则小凡变成表情包轮播
+- 表情和备选装扮可叠加,一张图最多 1 表情 + 1 装扮
+- 一旦加表情,IP 描述段里 **deadpan calm expression 必须删掉**,避免和表情词冲突
+
+**示例 — 默认(绝大多数情况)**:
+
+```text
+Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, deadpan calm expression, hand-drawn line art) ...
+```
+
+**示例 — 加"思考"表情(找原因 / 琢磨场景)**:
+
+```text
+Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slightly raised right eyebrow, eyes looking down-left, mouth closed, hand-drawn line art) ...
+```
+
+**示例 — 加"满足"表情(收工 / 完成场景)**:
+
+```text
+Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slight 1-2mm mouth upturn, half-closed eyes, level brows, hand-drawn line art) ...
+```
+
+---
+
 ## 完整 prompt 示例(实战 1 第一张)
 
 ```text

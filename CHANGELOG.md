@@ -6,6 +6,47 @@
 
 ---
 
+## v1.0 — 2026-07-17(微表情库)
+
+基于 deadpan 底色,加 5 个微表情变体,让"小凡-读者"的情感连接更具体。
+
+**新增 5 张表情变体**(`xiaofan-ink/assets/ip-reference/variants/`):
+- `07-thoughtful.png` — 思考(右眉微挑 / 眼斜看 / 嘴闭)
+- `08-confused.png` — 困惑(眉心微聚 / 眼微眯 / 嘴微松)
+- `09-tired.png` — 疲惫(眉尾下垂 / 眼半闭 / 嘴松)
+- `10-surprised.png` — 惊讶(眉上挑 / 眼睁大 1.2x / 嘴微张)
+- `11-satisfied.png` — 满足(嘴角微扬 1-2mm / 眼微眯 / 眉平)
+
+**风格校准**:
+- 5 张全部用 standard.png 作 input_file_paths,跟现有 01-06 outfit 变体完全一致
+- 全部保持纯线稿无填色,跟 standard.png / head-think.png 等核心参考图风格一致
+- 表情都是 deadpan 底色上的 1 度微变化,**不是大表情** — 不会触发"日漫/吉祥物/表情包"错误风格
+
+**文档更新**:
+- `xiaofan-ink/references/xiaofan-ip.md` — 新增"表情库(可选用)"section
+  - 列出 5 个微表情及适用场景
+  - 强调"微表情,不是夸张五官"
+  - 强调"表情库和备选装扮可叠加,但一张图最多 1 表情 + 1 装扮"
+- `xiaofan-ink/assets/prompts/_standard-ip-description.md` — 新增"表情选项(可选用)"section
+  - 表情-prompt 用词对照表(英文 prompt 替换词)
+  - 提供带表情的 IP 描述段示例
+- `xiaofan-ink/references/prompt-template.md` — 新增"表情选择(可选用)"section
+  - 明确"默认 deadpan 即可,什么时候用表情"
+  - 表情使用纪律(同文最多 2-3 种 + 一旦加表情必须删掉 deadpan)
+  - 3 个实战示例(默认 / 思考 / 满足)
+
+**表情使用纪律**:
+- 默认一律 deadpan,不要每张图都加情绪
+- 同一篇文章里,多张图最多 2-3 种不同表情
+- 一旦加表情,IP 描述段里 `deadpan calm expression` 必须删掉,避免和表情词冲突
+
+**为什么是 v1.0**:
+- 之前 v0.x 阶段是"个人用、私有项目阶段"
+- v1.0 是"表情库建立完整"的里程碑 — IP 三维度全部到位(姿态/装扮/表情)
+- 后续如果公开,从 v1.x 继续
+
+---
+
 ## v0.9 — 2026-07-17(prompt 库对齐"线稿版的我"基准)
 
 基于 v0.8 确立的"线稿版的我"IP 风格,统一重写 prompt 库。

@@ -50,10 +50,34 @@
 - 始终用 `xiaofan-ink/assets/ip-reference/standard.png` 作 input_file_paths
 - 不要用原始证件照(已从 .ip-dev/legacy-examples/ 移走)
 
+## 表情选项(可选用,默认用 deadpan 即可)
+
+实战 prompt 的 IP 描述段里,默认 `deadpan calm expression`。如果当前图需要 1 度情绪传递,可在 IP 描述段里替换为以下微表情词(都是 deadpan 底色上的轻微变化,**不要大表情**):
+
+| 情绪 | prompt 用词 | 适用场景 | 参考图 |
+|------|------------|----------|--------|
+| 默认(冷静) | `deadpan calm expression` | 绝大多数场景 | `standard.png` |
+| 思考 | `slightly raised right eyebrow, eyes looking down-left, mouth closed` | 想 / 琢磨 / 找原因 | `variants/07-thoughtful.png` |
+| 困惑 | `slightly furrowed brows, eyes half-closed, mouth slightly relaxed` | 看不懂 / 不确定 / 卡住 | `variants/08-confused.png` |
+| 疲惫 | `drooping brows, eyes half-closed, mouth loose` | 累 / 加班 / 反复试错 | `variants/09-tired.png` |
+| 惊讶 | `raised brows, eyes 1.2x wider, mouth slightly open but no wider than a finger` | 发现 / 醒悟 / 突然想到(不要震惊大嘴) | `variants/10-surprised.png` |
+| 满足 | `slight 1-2mm mouth upturn, half-closed eyes, level brows` | 做完 / 完成 / 收工(不要咧嘴笑) | `variants/11-satisfied.png` |
+
+**表情使用纪律**:
+- 默认一律用 `deadpan calm expression`,不要每张图都加情绪
+- 同一篇文章里,多张图最多用 2-3 种不同表情(其余保持 deadpan),避免小凡变成"表情包轮播"
+- 表情和备选装扮可叠加,但一张图最多 1 表情 + 1 装扮
+
 ## 实战 prompt 标准 IP 描述段(直接复制)
 
 ```
 Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, deadpan calm expression, hand-drawn line art) [姿态/动作/物件].
+```
+
+带表情的 IP 描述段示例:
+
+```
+Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slightly furrowed brows, eyes half-closed, mouth slightly relaxed, hand-drawn line art) [姿态/动作/物件].
 ```
 
 ## 反面描述(不要写进 prompt,会触发错误风格)
