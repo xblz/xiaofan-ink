@@ -39,7 +39,7 @@ topic: 工具反思 — 专注类(跟 001 节奏配对)
 
 那 25 分钟,我"在场"了吗?在场了。但那个"在场"没留下痕迹。
 
-![小凡从钟形罩出来后,手空,笔记本空白,困惑](images/002-focus-boundary/02-blank-after.png)
+![打开的空白笔记本 + 笔 + 显示 00 的番茄钟 + 「空」标注](images/002-focus-boundary/02-blank-state.png)
 
 ---
 
@@ -65,7 +65,7 @@ topic: 工具反思 — 专注类(跟 001 节奏配对)
 
 所以我现在桌上有 25 分钟钟,也有一块白板写着"被打断也行"。
 
-![小凡桌上白板写着"也行",手里端咖啡,小满足](images/002-focus-boundary/04-ok-to-interrupt.png)
+![白板上写"也行" + 1 杯咖啡 + 留白](images/002-focus-boundary/04-whiteboard-ok.png)
 
 ---
 
@@ -77,7 +77,7 @@ topic: 工具反思 — 专注类(跟 001 节奏配对)
 
 专注这件事,不是越多越好,是真的算数才算。
 
-![小凡站在桌前,桌上有钟 + 白板"被打断也行" + 咖啡,deadpan 看画外](images/002-focus-boundary/05-new-desktop.png)
+![桌面:25 分番茄钟在桌角 + 白板写"被打断也行" + 半杯咖啡 + 1 张写了字的纸](images/002-focus-boundary/05-new-arrangement.png)
 
 ---
 

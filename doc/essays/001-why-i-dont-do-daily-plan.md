@@ -52,7 +52,7 @@ topic: 工具反思 — 节奏类
 
 还有 1 张纸写"今天不做哪些事"。明确"不做"比"要做"更难写,但写下来有奇效。
 
-![小凡蹲在角落画外,看着桌上一堆做过的草稿](images/001-why-i-dont-do-daily-plan/03-corner-squat.png)
+![3 张草稿纸 + 1 张红框「今天不做」清单](images/001-why-i-dont-do-daily-plan/03-three-only.png)
 
 ---
 
@@ -66,7 +66,7 @@ topic: 工具反思 — 节奏类
 
 可能是因为,不用再花 20 分钟跟"今天该做什么"打架了。
 
-![小凡站在桌前,回头看画外,桌上 3 张纸 + 1 张红色"不做"清单 + 半杯咖啡](images/001-why-i-dont-do-daily-plan/04-desk-back.png)
+![桌面平视图:3 张草稿 + 1 张红框"今天不做"清单 + 半杯冷咖啡](images/001-why-i-dont-do-daily-plan/04-final-desktop.png)
 
 ---
 
