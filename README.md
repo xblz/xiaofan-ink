@@ -135,11 +135,13 @@
 │   │   ├── 001-why-i-dont-do-daily-plan.md
 │   │   ├── 002-focus-boundary.md
 │   │   ├── 003-llm-code-control.md   ← 工具三部曲收尾(控制权)
+│   │   ├── 004-red-light-30-seconds.md   ← v2.0 生活小事角度池开篇
 │   │   └── images/
 │   │       ├── 000-grass-journal-intro/   (cover + 4 张,去 IP)
 │   │       ├── 001-why-i-dont-do-daily-plan/  (cover + 4 张)
 │   │       ├── 002-focus-boundary/             (cover + 5 张)
-│   │       └── 003-llm-code-control/          (cover + 4 张,v1.8 IP 决策:3 IP + 2 去 IP)
+│   │       ├── 003-llm-code-control/          (cover + 4 张,v1.8 IP 决策:3 IP + 2 去 IP)
+│   │       └── 004-red-light-30-seconds/       (cover + 3 张,v2.0)
 │   └── images/                     ← 实战配图(按文章分子目录)
 │       ├── whiteboard-vs-doc/      (4 张)
 │       ├── why-i-quit-gtd/         (4 张)
