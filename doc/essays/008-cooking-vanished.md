@@ -70,7 +70,7 @@ topic: 生活小事 — 过程 > 结论(7 月外卖新规触发, 独立成篇)
 
 不是忘了菜谱, 是忘了"做饭这件事本身"。
 
-![空着的厨房灶台, 蒙了一层薄灰, 旁边是几个外卖盒, 状态安静](images/008-cooking-vanished/02-empty-kitchen.png)
+![空着的厨房灶台, 蒙了一层薄灰, 旁边是几个外卖盒, 状态安静](images/008-cooking-vanished/02-dusty-knife.png)
 
 ---
 
@@ -100,7 +100,7 @@ topic: 生活小事 — 过程 > 结论(7 月外卖新规触发, 独立成篇)
 
 整盘菜, 我从切到装盘用了 35 分钟, 炒出来的东西,我夹了一口, 觉得**还不如外卖**。
 
-![小凡站在厨房, 看着冷灶, thoughtful 表情](images/008-cooking-vanished/03-standing-kitchen.png)
+![小凡站在厨房, 看着冷灶, thoughtful 表情](images/008-cooking-vanished/03-forgot-how.png)
 
 ---
 

@@ -34,7 +34,7 @@ AI 用了 12 秒, 给我 800 字, 排版工整, 引用了 3 份数据, 最后还
 
 然后我把它粘到某平台, 想看看反馈。
 
-![小凡打开 AI 工具, 输入 prompt, deadpan 表情](images/007-ai-flavor/01-opened-tool.png)
+![小凡打开 AI 工具, 输入 prompt, deadpan 表情](images/007-ai-flavor/01-typing-prompt.png)
 
 ---
 
@@ -96,7 +96,7 @@ AI 用了 12 秒, 给我 800 字, 排版工整, 引用了 3 份数据, 最后还
 
 **这是"作品", 不是"草稿"。**
 
-![小凡盯着屏幕, thoughtful 表情](images/007-ai-flavor/03-staring-screen.png)
+![小凡盯着屏幕, thoughtful 表情](images/007-ai-flavor/03-staring-draft.png)
 
 ---
 
