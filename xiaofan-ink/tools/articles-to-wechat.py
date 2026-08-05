@@ -321,7 +321,7 @@ def list_essays():
     if not ESSAYS_DIR.exists():
         print(f"❌ 找不到 essays 目录: {ESSAYS_DIR}")
         return
-    essays = sorted(ESSAYS_DIR.glob("00*-*.md"))
+    essays = sorted(ESSAYS_DIR.glob("[0-9][0-9][0-9]-*.md"))
     if not essays:
         print("📭 没有 essays(还没有发布的文章)")
         return
@@ -340,7 +340,7 @@ def find_essay_by_slug(slug):
     if not ESSAYS_DIR.exists():
         return None
     # slug 形如 "001" 或 "001-why-i-dont-do-daily-plan"
-    essays = sorted(ESSAYS_DIR.glob("00*-*.md"))
+    essays = sorted(ESSAYS_DIR.glob("[0-9][0-9][0-9]-*.md"))
     for f in essays:
         if f.stem == slug or f.stem.startswith(slug + "-") or f.stem.startswith(slug):
             return f
@@ -477,7 +477,7 @@ def main():
         return
 
     if args.all:
-        essays = sorted(ESSAYS_DIR.glob("00*-*.md"))
+        essays = sorted(ESSAYS_DIR.glob("[0-9][0-9][0-9]-*.md"))
         print(f"🔁 同步所有 {len(essays)} 篇 essays\n")
         for f in essays:
             print(f"\n{'='*60}")
