@@ -382,6 +382,24 @@ def sync_essay(config, slug):
     n = str(n)
     title = str(title)
 
+    # 1.5 敏感词/品牌名检查 (v2.5 新增)
+    print("\n🔍 敏感词/品牌名/违规项检查...")
+    try:
+        import importlib.util
+        import sys as _sys
+        _tools_dir = Path(__file__).parent
+        _spec = importlib.util.spec_from_file_location("sensitive_check", _tools_dir / "sensitive-check.py")
+        _mod = importlib.util.module_from_spec(_spec)
+        _sys.modules["sensitive_check"] = _mod
+        _spec.loader.exec_module(_mod)
+        full_text = f"{title}\n{meta.get('digest','')}\n{body}"
+        hits = _mod.check_text(full_text)
+        _mod.print_report(hits, target="essay")
+        if hits:
+            print("   ⚠️  上方命中项已记录, 默认继续(不阻断)。如需中断请加 --strict。")
+    except Exception as e:
+        print(f"   ⚠️  sensitive_check 加载失败, 跳过检查: {e}")
+
     # 2. 上传所有配图到"图文消息内图片",获取微信 URL
     print("\n📤 上传配图到图文消息内图片 API...")
     image_url_map = {}  # 本地路径 → 微信 URL
