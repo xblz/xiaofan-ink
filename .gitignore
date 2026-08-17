@@ -28,3 +28,9 @@ xiaofan-ink/tools/.token_cache.json
 __pycache__/
 *.pyc
 .gstack/
+
+# 线下物料 (大源文件, 不入库, 备份在别处)
+brand/offline-materials/*.ai
+brand/offline-materials/*.sketch
+brand/offline-materials/*.otf
+brand/offline-materials/*.pdf
