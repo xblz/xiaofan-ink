@@ -1,7 +1,13 @@
 # 小凡的草稿本 — 公众号 Brand 资源
 
-> 本目录保存公众号"小凡的草稿本"的所有 brand 资源。
-> 跟 xiaofan-ink skill 的内容库(`doc/essays/`)配套使用 — 内容由 skill 生成,brand 资源由本目录统一管理。
+> 本目录保存**公众号"小凡的草稿本"** 的所有 brand 资源 (v2.8 起, 跟抖音"观心微语" 共用 IP 形象 + 视觉规范)。
+> 跟 xiaofan-ink skill 的内容库(`doc/essays/`)配套使用 — 内容由 skill 生成, brand 资源由本目录统一管理。
+>
+> **多平台说明** (v2.8 起):
+> - 公众号 (本目录) — 工具反思 / 过程 > 结论
+> - 抖音 (`platforms/douyin.md`) — 心理咨询 / 扎心文案
+> - IP 形象 + 视觉规范共享, 内容**完全分开**
+> - 详见 `AGENTS.md` 和 `PROJECT-HISTORY.md`
 
 ## 基础信息
 
