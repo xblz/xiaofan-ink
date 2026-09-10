@@ -11,9 +11,9 @@ images:
   - 02-screen-vs-hands.png
   - 03-hand-flow.png
   - 04-punchline.png
-expressions: 0/5 用
+expressions: 1/5 用 (03 死板冷静)
 outfits: 0/5 用
-poses: 0/5 用
+poses: 1/5 用 (03 坐桌前摆拼豆)
 ---
 
 # 手搓的人, 都不是为了做出来
@@ -76,7 +76,7 @@ poses: 0/5 用
 
 手搓有 1 个 AI 永远给不了的东西: **即时反馈**。
 
-[![1 个手 + 4 步流程 (摆豆 → 烫熔 → 完整图案), 每步有蓝字步骤名 + 橙字即时反馈: "豆子动了" / "图案成型" / "完成钥匙扣"](images/027-handmade/03-hand-flow.png)](images/027-handmade/03-hand-flow.png)
+[![小凡桌前摆拼豆 (死板冷静, 1 手拿镊子, 1 手摆豆) + 桌上有散落拼豆+镊子+熨斗+半成品+成品钥匙扣 + 右侧 4 步流程 (摆豆→烫熔→图案成型→钥匙扣完成), 每步蓝字步骤名 + 橙字"即时反馈" + 灰字"动作1步, 反馈1步"](images/027-handmade/03-hand-flow.png)](images/027-handmade/03-hand-flow.png)
 
 你摆 1 颗豆, 模板上多了 1 个点。 你钩 1 行, 包包就大 1 圈。 你贴 1 张贴纸, 小屋多 1 扇窗。
 

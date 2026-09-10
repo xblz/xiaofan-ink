@@ -96,11 +96,20 @@
 - **不画具体 app 内容** (如打车 app 27元/外卖 app 红点), 屏幕简笔即可
 - 屏幕里显示什么走 markdown alt text + 正文文字提示读者, 不靠画面展示
 
+**IP 形象出现频率** (v2.8.18 新增, 硬规则, **防 IP 失联**):
+- **5 张图里至少 1 张含 IP 形象** (动作型, 跟主题相关)
+- 位置: 02 或 03 位置 (内容图), 不在 00 banner / 04 punchline (大字钩子/收尾留给文字)
+- 例外: 5 张全 IP 也行, 但 ≥1 张是底线
+- 失联红线: **连续 3 篇 0 IP = IP 失联, 必须重画加 IP**
+- 起源: v2.8.17 024-028 5 篇连发 0 IP, IP 失联 13 天, 用户(9/10)反馈修正
+- v1.8 决策表依然有效, 但加这条下限: 状态型/集体观察/工具反思, 02/03 位置插 1 张 IP 锚点
+
 **自检 (同步前必跑)**:
 - img 引用数 (`![]()` 数量) = front matter `images:` 列表数 → 不一致阻断
 - 每张配图 prompt 不含 `very hot` / `sweat` / `towel` / `electric fan` / `air conditioning` 这类"突出温度感" 关键词
 - 6-9 月的 IP 形象图 prompt 含 `short-sleeve t-shirt` 至少一次
 - 12-2 月的 IP 形象图 prompt 含 `winter coat` / `thick jacket` 至少一次
+- **5 张图里至少 1 张含 IP 形象** (front matter `expressions` 字段必须 ≥1/5 用) → 不达标阻断
 
 ## 4. 封面(每篇推送的封面图)
 

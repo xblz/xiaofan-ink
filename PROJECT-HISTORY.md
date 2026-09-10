@@ -1175,3 +1175,68 @@ header 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8'
 - 020/021/022 公众号 8/25 已发版阅读/数据待统计
 - 公众号抓数据 (v2.8.17 待处理, 微信扫码登录同样风险)
 
+---
+
+## v2.8.18 阶段 (2026-09-10): 公众号 027/028 加 IP 锚点 + 沉淀"防 IP 失联" 硬规则
+
+**触发**: 用户(9/10)反馈"最近公众号配图的策略调整了吗, 还是最近的文章都没必要出现我们的 IP 形象相关的配图呢, 如果有必要可以重新处理文章和配图" + "后续不希望下次发生相同的问题"
+
+**问题诊断**:
+- 024-028 5 篇连发 0 IP, IP 形象失联 13 天 (8/28-9/10)
+- v1.8 决策表 (v2.6 沉淀) 严格执行结果: 状态型画面 → 去 IP, 但没区分"封面/收尾" 和"内容图" 位置
+- 9 月双联/三联集体观察/工具反思角度, 全图解型, 0 IP 配合 v1.8 决策表
+- 但个人 IP 公众号 13 天不见 IP = 跟"匿名作者" 没区别, 这是真实风险
+
+**决策**: 按方案 C 处理 — 027/028 各加 1 张 IP 配图 (动作型, 5 张总数不变, 不破坏 9 月双联/三联设计):
+- **027 03 hand-flow 改成**: 小凡桌前摆拼豆 (死板冷静, 1 手拿镊子 1 手摆豆) + 桌上有散落拼豆+镊子+熨斗+半成品+成品钥匙扣 + 右侧 4 步流程保留
+- **028 03 ai-tax-flow 改成**: 小凡低头看手机 (死板冷静, 屏幕 iCloud 订阅 ¥28/月 自动续费) + 右侧缩略流程图保留
+- banner (00) / punchline (04) 保留大字钩子/收尾, 留给文字 — 不在封面/收尾改 IP
+
+**操作步骤**:
+1. 重画 2 张 IP 配图 (用 `xiaofan-ink/assets/ip-reference/standard.png` 作 input_file_paths, 跟 standard 描述段对齐)
+2. PIL JPEG 化 1376x768, 139-150KB
+3. 改 2 篇 content.md (image 描述 + front matter `expressions: 0/5 → 1/5 用` + `poses: 0/5 → 1/5 用`)
+4. 微信 API 不支持更新草稿, **删旧草稿 + 新建** (草稿 ID 变):
+   - 027 旧: `4Qs6oAKtTbuKncYKGGbmXBA8UScAx5O-ALsqvmwCeuULWbfvgjZbUnHp02ykrSe3` → 新: `4Qs6oAKtTbuKncYKGGbmXIRPTxPngG9TFwEP4vCfIA0bUdONlyuXlqwrk7TD7C8r`
+   - 028 旧: `4Qs6oAKtTbuKncYKGGbmXPuUyMe8_IcfJwckj3r_hmQzUkbSYnafGMyMEf8qbAXW` → 新: `4Qs6oAKtTbuKncYKGGbmXJKFrZxQiQoraN45mL-a_oJPCRaHz8mBpOjK5Dc_caSB`
+5. 沉淀硬规则到 style-guide §3.6
+6. 更新所有跟踪表
+
+**新草稿 ID** (v2.8.18):
+- 027: `4Qs6oAKtTbuKncYKGGbmXIRPTxPngG9TFwEP4vCfIA0bUdONlyuXlqwrk7TD7C8r` (2026-09-10 10:35)
+- 028: `4Qs6oAKtTbuKncYKGGbmXJKFrZxQiQoraN45mL-a_oJPCRaHz8mBpOjK5Dc_caSB` (2026-09-10 10:36)
+
+**新观察沉淀 (v2.8.18 核心: 防 IP 失联硬规则)**:
+1. **5 张图里至少 1 张含 IP 形象** (v2.8.18 新增, 硬规则): 动作型, 跟主题相关, 02/03 内容图位置; banner (00) / punchline (04) 留给文字
+2. **失联红线 (v2.8.18 新增)**: 连续 3 篇 0 IP = IP 失联, 必须重画加 IP
+3. **v1.8 决策表扩展 (v2.8.18)**: 状态型/集体观察/工具反思, 02/03 位置插 1 张 IP 锚点; 不在封面/收尾改 IP
+4. **微信 API 不支持更新草稿 (v2.8.18 验证)**: 改图必须删旧 + 新建, 草稿 ID 变, SERIES-DRAFT-IDS 同步更新
+5. **删旧草稿 API (v2.8.18 新增工具知识)**: `cgi-bin/draft/delete?access_token=...`, body `{"media_id": "..."}`, errcode=0 表示成功
+
+**沉淀到 style-guide §3.6 新增段**:
+- "IP 形象出现频率 (v2.8.18 新增, 硬规则, **防 IP 失联**)"
+- 5 张图里至少 1 张含 IP 形象 (动作型, 跟主题相关)
+- 位置: 02 或 03 位置 (内容图), 不在 00 banner / 04 punchline
+- 例外: 5 张全 IP 也行, 但 ≥1 张是底线
+- 失联红线: 连续 3 篇 0 IP = IP 失联, 必须重画加 IP
+- 起源: v2.8.17 024-028 5 篇连发 0 IP, IP 失联 13 天, 用户(9/10)反馈修正
+- 自检: front matter `expressions` 字段必须 ≥1/5 用 → 不达标阻断
+
+**文档更新**:
+- `doc/essays/images/027-handmade/03-hand-flow.png` 重画 (加 IP 形象, 小凡桌前摆拼豆)
+- `doc/essays/images/028-ai-tax/03-ai-tax-flow.png` 重画 (加 IP 形象, 小凡看订阅扣款)
+- `doc/essays/027-handmade.md` front matter `expressions: 0/5 → 1/5 用` + `poses: 0/5 → 1/5 用` + image 描述更新
+- `doc/essays/028-ai-tax.md` front matter `expressions: 0/5 → 1/5 用` + `poses: 0/5 → 1/5 用` + image 描述更新
+- `doc/SERIES-DRAFT-IDS.md` 草稿 ID 全部更新 (旧 ID 标记失效)
+- `doc/SERIES-STATE.md` 027/028 行的 IP 状态从 0/5 改 1/5
+- `brand/style-guide.md` §3.6 新增"IP 形象出现频率" 段 + 自检项
+- `PROJECT-HISTORY.md` 本节 (v2.8.18)
+
+**待办** (不催更):
+- 027/028 群发 (9/10 v2.8.18 同步, 用户决定 9 月双联/三联群发时机)
+- 025 群发 (v2.8.12.3 已脱离开学时效, 任意时间可发)
+- 024/023 群发 (8/26-8/28 同步, 用户决定)
+- 026 群发 (9/9 同步, 用户决定)
+- 020/021/022 公众号 8/25 已发版阅读/数据待统计
+- 公众号抓数据 (v2.8.17 待处理, 微信扫码登录同样风险)
+

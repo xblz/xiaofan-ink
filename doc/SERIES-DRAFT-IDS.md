@@ -13,15 +13,16 @@
 
 | 编号 | 标题 | 草稿 ID | 同步时间 | 配图 |
 |---|---|---|---|---|
-| **027** | **手搓的人, 都不是为了做出来** | `4Qs6oAKtTbuKncYKGGbmXBA8UScAx5O-ALsqvmwCeuULWbfvgjZbUnHp02ykrSe3` | 2026-09-10 09:36 | 5 张 (v1.8 决策表: **0 IP** + 5 去 IP, 集体观察-反思 行为转向) |
-| **028** | **iPhone 18 涨了 1000, 你买的不是手机, 是 AI 税** | `4Qs6oAKtTbuKncYKGGbmXPuUyMe8_IcfJwckj3r_hmQzUkbSYnafGMyMEf8qbAXW` | 2026-09-10 09:47 | 5 张 (v1.8 决策表: **0 IP** + 5 去 IP, 工具反思-扩展 AI 税, 02 重画去苹果 logo) |
+| **027** | **手搓的人, 都不是为了做出来** | `4Qs6oAKtTbuKncYKGGbmXIRPTxPngG9TFwEP4vCfIA0bUdONlyuXlqwrk7TD7C8r` | 2026-09-10 10:35 (v2.8.18 03 重画加 IP, 旧 ID `4Qs6oAKtTbuKncYKGGbmXBA8UScAx5O-ALsqvmwCeuULWbfvgjZbUnHp02ykrSe3` 失效) | 5 张 (v1.8 决策表: **1 IP** (03 小凡摆拼豆) + 4 去 IP, 集体观察-反思 行为转向) |
+| **028** | **iPhone 18 涨了 1000, 你买的不是手机, 是 AI 税** | `4Qs6oAKtTbuKncYKGGbmXJKFrZxQiQoraN45mL-a_oJPCRaHz8mBpOjK5Dc_caSB` | 2026-09-10 10:36 (v2.8.18 03 重画加 IP, 旧 ID `4Qs6oAKtTbuKncYKGGbmXPuUyMe8_IcfJwckj3r_hmQzUkbSYnafGMyMEf8qbAXW` 失效) | 5 张 (v1.8 决策表: **1 IP** (03 小凡看订阅扣款) + 4 去 IP, 工具反思-扩展 AI 税, 02 重画去苹果 logo) |
 
-> 027/028 是 v2.8.17 第 2 段, 9 月双联/三联:
+> 027/028 是 v2.8.17 第 2 段 (后被 v2.8.18 修正, 03 加 IP), 9 月双联/三联:
 > - **026 自渡 (9/9 同步)** — 9 月热搜"自渡" 9 月年轻人搜索量最高的词; 4 个征兆 (跳槽/维权/朋友/政策); 落"过程>结论" + 收尾"自渡=草稿的另一种说法"
-> - **027 手搓 (9/10 同步)** — 9 月年轻人最上头新爱好 #手搓万物 87.6 亿次; 4 门类 (拼豆/钩织/贴纸/粘土); 落"过程>结论" + 收尾"手搓=草稿的另一种说法"
-> - **028 AI 税 (9/10 同步)** — iPhone 18 涨 1000 不是为硬件是为 AI 算力; 落"草稿>作品" + 收尾"AI 税=草稿的另一种说法"
+> - **027 手搓 (9/10 同步, v2.8.18 03 加 IP)** — 9 月年轻人最上头新爱好 #手搓万物 87.6 亿次; 4 门类 (拼豆/钩织/贴纸/粘土); 落"过程>结论" + 收尾"手搓=草稿的另一种说法"; 03 hand-flow 改成"小凡桌前摆拼豆 + 4 步流程" (动作型, 防止 IP 失联)
+> - **028 AI 税 (9/10 同步, v2.8.18 03 加 IP)** — iPhone 18 涨 1000 不是为硬件是为 AI 算力; 落"草稿>作品" + 收尾"AI 税=草稿的另一种说法"; 03 ai-tax-flow 改成"小凡低头看手机 (订阅扣款通知) + 流程图缩略" (动作型, 防止 IP 失联)
 > - **3 篇都收尾在"草稿"**: 强化调性, 9 月观察 3 联 (心理+行为+工具)
 > - 028 02 iphone-explode 图含苹果 logo 触发 v2.6.1 配图硬规则, 重画去 logo; **新观察**: 渲染器画"iPhone outline" 会自动加苹果 logo, prompt 必加 "NO apple logo, NO brand name"
+> - **v2.8.18 修正**: 用户(9/10)发现 024-028 5 篇连发 0 IP, IP 形象失联 13 天; 按 style-guide §3.6 新硬规则 "5 张至少 1 张 IP 锚点" 加 IP; 删旧草稿 + 新建, 草稿 ID 变
 
 ---
 

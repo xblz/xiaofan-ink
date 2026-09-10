@@ -11,9 +11,9 @@ images:
   - 02-iphone-explode.png
   - 03-ai-tax-flow.png
   - 04-punchline.png
-expressions: 0/5 用
+expressions: 1/5 用 (03 死板冷静)
 outfits: 0/5 用
-poses: 0/5 用
+poses: 1/5 用 (03 坐桌前看手机)
 ---
 
 # iPhone 18 涨了 1000, 你买的不是手机, 是 AI 税
@@ -68,7 +68,7 @@ GPU 算力不是天上掉下来的。 它来自 1 个地方: 台积电的 3nm �
 
 AI 税是你**自愿付的**。 你知道手机里有 AI, 你知道 AI 算力要钱, 你还是买了。 因为你不想被落下。
 
-[![1 个流程图 (左: 灰"你" + 橙钱袋 → 中: 橙"苹果" + 蓝"AI 公司" → 右: 蓝"GPU 算力" + 蓝"AI 模型" + 橙"数据中心"), 蓝字"你为 AI 付钱" + 橙字"但你不知道" + 红 brush 圈"你不知道"](images/028-ai-tax/03-ai-tax-flow.png)](images/028-ai-tax/03-ai-tax-flow.png)
+[![小凡低头看手机 (死板冷静, 屏幕上"iCloud 订阅 ¥28/月 自动续费" + 信用卡图标) + 右侧缩略流程图 (你→苹果→AI 公司→GPU 算力/AI 模型/数据中心) + 蓝字"你为 AI 付钱" + 橙字"但你不知道" + 红 brush 圈"但你不知道"](images/028-ai-tax/03-ai-tax-flow.png)](images/028-ai-tax/03-ai-tax-flow.png)
 
 AI 税不只是手机。
 
