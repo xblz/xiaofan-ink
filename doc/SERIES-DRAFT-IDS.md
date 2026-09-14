@@ -1,7 +1,7 @@
 # 草稿 ID 索引
 
 > 记录所有**已发 / 草稿箱 / 限流删除**的文章 ID, 方便查询 + 跟踪
-> 更新: 2026-09-14 (v2.8.20 第 3 段: 加 029 「延迟退休」 + 030 「学会不用」, 9 月四联 + 简介化用, 都收尾在"草稿", 9 月观察 5 联 (心理+行为+工具+时间+清单))
+> 更新: 2026-09-14 (v2.8.21 单篇独立硬规则: 029 + 030 重写删所有"9 月 X 联" / 历史引用, 新 ID 替换旧 ID, 旧 ID 已 draft/delete 删)
 >
 > 跟 `doc/SERIES-STATE.md` 区别: 那个是"防重复"基础设施 (角度池/姿态/表情), 这个是"草稿 ID 跟踪表".
 
@@ -15,8 +15,8 @@
 |---|---|---|---|---|
 | **027** | **手搓的人, 都不是为了做出来** | `4Qs6oAKtTbuKncYKGGbmXIRPTxPngG9TFwEP4vCfIA0bUdONlyuXlqwrk7TD7C8r` | 2026-09-10 10:35 (v2.8.18 03 重画加 IP, 旧 ID `4Qs6oAKtTbuKncYKGGbmXBA8UScAx5O-ALsqvmwCeuULWbfvgjZbUnHp02ykrSe3` 失效) | 5 张 (v1.8 决策表: **1 IP** (03 小凡摆拼豆) + 4 去 IP, 集体观察-反思 行为转向) |
 | **028** | **iPhone 18 涨了 1000, 你买的不是手机, 是 AI 税** | `4Qs6oAKtTbuKncYKGGbmXJKFrZxQiQoraN45mL-a_oJPCRaHz8mBpOjK5Dc_caSB` | 2026-09-10 10:36 (v2.8.18 03 重画加 IP, 旧 ID `4Qs6oAKtTbuKncYKGGbmXPuUyMe8_IcfJwckj3r_hmQzUkbSYnafGMyMEf8qbAXW` 失效) | 5 张 (v1.8 决策表: **1 IP** (03 小凡看订阅扣款) + 4 去 IP, 工具反思-扩展 AI 税, 02 重画去苹果 logo) |
-| **029** | **延迟退休到 63 了, 我学会了不为 60 岁攒** | `4Qs6oAKtTbuKncYKGGbmXJU5WBLOQ429uNHG9N5zmfMHWfOjb-lqYVNpZOGj4cjj` | 2026-09-14 09:58 (v2.8.20 第 3 段同步) | 5 张 (v1.8 决策表: **1 IP** (03 小凡低头看手机+桌上有咖啡杯) + 4 去 IP, 集体观察-反思 时间, 蹭 9/9 临沂日报 + 9/10 腾讯 30 秒查清"延迟退休焦虑", 落"过程 > 结论") |
-| **030** | **我学会了不用的 8 个东西, 你来学什么?** | `4Qs6oAKtTbuKncYKGGbmXHK9VCpdBdXIVh64VmmEu_rNKci-F6dIV5bydpJrTZ1i` | 2026-09-14 09:59 (v2.8.20 第 3 段同步) | 5 张 (v1.8 决策表: **1 IP** (03 小凡桌前看笔记本写"草稿") + 4 去 IP, 个人清单-草稿, 简介直接化用, 落"草稿 > 作品") |
+| **029** | **延迟退休到 63 了, 我学会了不为 60 岁攒** | `4Qs6oAKtTbuKncYKGGbmXNlgpfOTY8XC9qthADPVoWihFzTjhhDp6R5OK8tJR2tt` | 2026-09-14 10:24 (v2.8.21 单篇独立硬规则, 重写删"9 月 X 联 026/027/028" 历史引用, 旧 ID `4Qs6oAKtTbuKncYKGGbmXJU5WBLOQ429uNHG9N5zmfMHWfOjb-lqYVNpZOGj4cjj` 9/14 v2.8.20 同步 → 9/14 v2.8.21 draft/delete 删) | 5 张 (v1.8 决策表: **1 IP** (03 小凡低头看手机+桌上有咖啡杯) + 4 去 IP, 集体观察-反思 时间, 蹭 9/9 临沂日报 + 9/10 腾讯 30 秒查清"延迟退休焦虑", 落"过程 > 结论", v2.8.21 单篇独立, 收尾 1 句"延迟退休=草稿的另一种说法") |
+| **030** | **我学会了不用的 8 个东西, 你来学什么?** | `4Qs6oAKtTbuKncYKGGbmXOyCpCLoAYRAe9O_L-HcYdnJSn6lhtuRZlCxGaafm5cq` | 2026-09-14 10:25 (v2.8.21 单篇独立硬规则, 重写删"9 月 X 联 026/027/028/029" 历史引用, 旧 ID `4Qs6oAKtTbuKncYKGGbmXHK9VCpdBdXIVh64VmmEu_rNKci-F6dIV5bydpJrTZ1i` 9/14 v2.8.20 同步 → 9/14 v2.8.21 draft/delete 删) | 5 张 (v1.8 决策表: **1 IP** (03 小凡桌前看笔记本写"草稿") + 4 去 IP, 个人清单-草稿, 简介直接化用, 落"草稿 > 作品", v2.8.21 单篇独立, 收尾 1 句"学会了不用=草稿的另一种说法") |
 
 > 027/028 是 v2.8.17 第 2 段 (后被 v2.8.18 修正, 03 加 IP), 9 月双联/三联:
 > - **026 自渡 (9/9 同步)** — 9 月热搜"自渡" 9 月年轻人搜索量最高的词; 4 个征兆 (跳槽/维权/朋友/政策); 落"过程>结论" + 收尾"自渡=草稿的另一种说法"
