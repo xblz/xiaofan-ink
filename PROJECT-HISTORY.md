@@ -1676,3 +1676,64 @@ header 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8'
 - 抖音开放平台 API 接入 (P0, 异步等用户决定 A/B/C, 执照不符已沉淀)
 - style-guide §10.4 灵活模式章节 (v2.8.26 沉淀)
 - 公众号 027/028/029/030 群发 (6 篇草稿箱待发, 用户决定发哪天)
+
+---
+
+### 9. gstack picker UI 抓数据成功 (v2.8.26, 9/16)
+
+**触发**: 用户(9/16)反馈 "我的浏览器已经登录了抖音, 现在你继续尝试访问抖音创作者中心" — 给 gstack 再试一次机会
+
+**v2.8.26 成功方法 (新, 突破 v2.8.19 + 9/14 + 9/16 第一/二次失败)**:
+1. gstack set UA "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" + sec-ch-ua headers (跟 9/7 9:44 一字不差)
+2. gstack `cookie-import-browser chrome` (no args, picker UI) → **用户手动在 http://127.0.0.1:24801/cookie-picker 选全部 douyin-related domain** → **142 cookies, 13 domain**
+3. **不 reload**, 直接 navigate content/manage → **登录成功, 看到内容管理界面**
+4. **第 2 次 navigate** → **跳登录** (抖音风控 per-navigation 新验证)
+
+**关键洞察 (v2.8.26)**:
+- `cookie-import-browser chrome` (no args, picker UI) 是关键, 跟 9/7 9:44 用的 picker 一样
+- 用户**手动配合 1 次** picker UI (5-10 秒) → 142 cookies import → 1 次 navigate 成功
+- **每次 picker 配合后只能 navigate 1 次**, 不能 reload 不能 navigate 第二次 (抖音风控 per-navigation 新验证)
+- 抓数据最佳流程: picker 配合 → navigate content/manage → 立刻 text/js 抓所有 DOM → 退出
+- **用户配合代价**: 1 次 picker UI 选 domain (5-10 秒), 比重启 Chrome + --remote-debugging-port (v2.8.21 试过, 9222 没 listen 失败) 轻量 100 倍
+
+**v2.8.19 失败原因重新分析**:
+- v2.8.19 + 9/14 用 `cookie-import /tmp/douyin-cookies-final.json` (从 macOS Chrome DB 解密) — 跟 picker 同源, 但可能 session stale 或者 fingerprint 不匹配
+- v2.8.19 用 `cookie-import-browser` 不带 domain scope, picker 自动扫描用户 Chrome 全部 douyin-related cookies → 这次成功
+- 9/16 第一/二次用 `--domain creator.douyin.com` 只 import 13 cookies 不够, 缺 douyin.com/open-douyin.com 等关键 domain
+- **v2.8.26 突破点**: `cookie-import-browser chrome` (no args) → picker 自动全 domain → 142 cookies 完整
+
+**v2.8.26 抓的 4 篇数据** (已存 doc/analytics/douyin/9-16-data.md):
+| 编号 | 标题 | 发布时间 | 播放 | 点赞 | 评论 | 分享 | 收藏 | 划走率 | 文案展开率 | 平均浏览图片数 | 张数 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 025 | 车里10 分钟 | 2026-09-16 08:26 | 51 | 1 | 0 | 0 | 0 | 24.62% | 4.55% | 4.1 | 6 |
+| 026 | 送孩子上学 | 2026-09-16 08:23 | 55 | 0 | 0 | 0 | 0 | 37.84% | 7.89% | 2.8 | 4 |
+| 024 | 我没事≠我没事 | 2026-09-15 13:41 | 94 | 1 | 0 | 0 | 0 | 39.39% | 1.98% | 2.3 | 5 |
+| 023 | 忍住没说 | 2026-09-15 (text 截断未抓全) | — | — | — | — | — | — | — | — | 4 |
+
+**抖音实际已发布 22 篇** (v2.8.26 修正):
+- 001-004 (历史)
+- 005/006 (决定不发)
+- 007-020 (14 篇, 9/7+9/8 抓过数据)
+- 023/024 (2 篇, 9/15 用户发, 我之前不知道, v2.8.26 发现)
+- 025/026 (2 篇, 9/16 用户发, 已抓)
+- 总: 001-004 + 007-020 + 023/024 + 025/026 = 22 篇
+- 待发布: 021/022 (2 篇, 9/11 创建)
+
+**v2.8.26 vs v2.8.16 9/44 数据对比 (验证灵活模式 vs 讲故事模式)**:
+- 025 讲故事 (9/16 51 播放): 划走率 24.62%, 文案展开率 4.55%, 点赞 1
+- 026 灵活 (9/16 55 播放): 划走率 37.84%, 文案展开率 7.89%, 点赞 0
+- 024 共鸣金句 (9/15 94 播放): 划走率 39.39%, 文案展开率 1.98%, 点赞 1
+- **初步观察** (数据太少, 1 天样本):
+  - 025 划走率最低 24.62% (讲故事的"具体场景" 抓住读者), 播放 51 中等
+  - 026 文案展开率最高 7.89% (灵活模式的"问" 钩子), 划走率较高 37.84% (短内容, 看完就走)
+  - 024 播放最高 94 (共鸣金句"我没事≠我没事" 强共鸣), 但划走率 39.39% (共鸣完了就走)
+  - 3 个模式 9/16 数据 1 天都跑不过 9/3 的 016 状态型 747 (跟之前 9/7 跑赢 Top 3 状态型 747/共鸣 294/数字链 271 比, 新发 3 篇还在冷启期)
+
+**文档更新**:
+- `doc/analytics/douyin/9-16-data.md` 新建 (v2.8.26 抓的 4 篇 + 9/7+9/8 历史 18 篇合并)
+- `PROJECT-HISTORY.md` 本节 (v2.8.26)
+
+**待办** (不催更):
+- 023 完整数据 + 001-004 历史数据 (需再来一次 picker + navigate)
+- 021/022 发布 (用户决定)
+- 抖音开放平台 API 接入 (P0, 长期方案)
