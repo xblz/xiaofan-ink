@@ -16,15 +16,15 @@
 - **避开历史**:001 用了"为什么我不再做每日计划"(节奏类),实战 2 用了"为什么我不再用 GTD"(工具类)
 - **跟 001 配对**:001 谈"节奏"(列计划),002 谈"专注"(深度工作),形成"反思时间管理"姐妹篇
 - **角度新切口**:"X 的边界"格式(不重复 001 的"为什么我不再"格式)
-- **deadpan 调性匹配**:专注类话题很适合"冷静分析",不卖萌不喊口号
+- **调性匹配**:专注类话题很适合"冷静分析",不卖萌不喊口号
 
 ## 表情选型决策
 
 | 图 | 表情 | 选词理由 |
 |---|---|---|
-| 01 钟形罩 | deadpan | 引入段"标准形象",陈述事实,deadpan 合适 |
+| 01 钟形罩 | deadpan | 引入段"标准形象",陈述事实,合适 |
 | 02 出来后空白 | **困惑**(08-confused) | "专注 25 分钟出来时空了",真困惑 |
-| 03 切换门槛 | deadpan | "切换的隐藏成本"是陈述性事实,deadpan 表达"反复切"的状态 |
+| 03 切换门槛 | deadpan | "切换的隐藏成本"是陈述性事实,表达"反复切"的状态 |
 | 04 被打断也行 | **满足**(11-satisfied) | 转折段"换气"是新发现的释然,满足表情 |
 | 05 新桌面 | deadpan | 收束段"专注不是越多越好"冷静陈述 |
 
@@ -57,7 +57,7 @@ Theme: 25 分钟专注的标准形象 - 戴大耳机,关掉手机,打开番茄�
 
 Core idea: 专注时被一个"25 分钟"的钟形玻璃罩包住,以为"在专注"实际是"被罩住"。
 
-Composition: Xiaofan is sitting inside a large bell-jar / dome glass cover (like a classic "under glass" display) with a simple 25 minute tomato timer visible on a small desk inside. Xiaofan is wearing big over-ear headphones, his upper body visible through the glass, looking outward with a deadpan calm expression as if trapped inside the focus ritual. The dome has a small "25" written on top. The whole scene conveys "I am in the focus zone" but visually the dome says "I am sealed in."
+Composition: Xiaofan is sitting inside a large bell-jar / dome glass cover (like a classic "under glass" display) with a simple 25 minute tomato timer visible on a small desk inside. Xiaofan is wearing big over-ear headphones, his upper body visible through the glass, looking outward expression as if trapped inside the focus ritual. The dome has a small "25" written on top. The whole scene conveys "I am in the focus zone" but visually the dome says "I am sealed in."
 
 Chinese handwritten labels: '25 分钟' in orange on the dome / '深度工作' in blue on the timer / '专注中' in red on a small label near the dome
 ```
@@ -97,7 +97,7 @@ Theme: 现在我的桌面 - 25 分钟钟还在,白板写着"被打断也行"。
 
 Core idea: 专注不是越多越好,是被打断也能继续。
 
-Composition: Xiaofan is standing at a small simple desk, looking off-canvas to the side with a deadpan calm expression, as if calmly accepting interruptions...
+Composition: Xiaofan is standing at a small simple desk, looking off-canvas to the side, as if calmly accepting interruptions...
 ```
 
 ---

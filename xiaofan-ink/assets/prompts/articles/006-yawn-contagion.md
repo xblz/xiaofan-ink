@@ -36,7 +36,7 @@
 
 | 图 | 表情 | 选词理由 |
 |---|---|---|
-| 01 看别人打 | deadpan | "看到别人打" 是平静反应, deadpan 合适 |
+| 01 看别人打 | deadpan | "看到别人打" 是平静反应, 合适 |
 | 02 时间轴 | (去 IP, 无表情) | 状态型不需要人 |
 | 03 自己打 | **思考**(07-thoughtful) | "我也打了, 但我意识到" 真思考 |
 
@@ -85,7 +85,7 @@ Theme: 看别人打哈欠 - 同事打了第一个, 我看到了。
 
 Core idea: 1 小时后, 有人打哈欠, 我看到了, 还在观察。
 
-Composition: Xiaofan is sitting at a long meeting table, with a closed laptop in front of him. Across the table, another person is in the middle of a yawn (small cartoon "O" face on the opposite side, the person's face is blurry or schematic). Xiaofan's expression is deadpan calm - he sees the yawn, observes it, but doesn't react. His posture is still sitting, slightly slouched. The scene conveys "I see you yawn. I'm not yet there, but I'm watching."
+Composition: Xiaofan is sitting at a long meeting table, with a closed laptop in front of him. Across the table, another person is in the middle of a yawn (small cartoon "O" face on the opposite side, the person's face is blurry or schematic). Xiaofan's expression is neutral - he sees the yawn, observes it, but doesn't react. His posture is still sitting, slightly slouched. The scene conveys "I see you yawn. I'm not yet there, but I'm watching."
 
 Input: xiaofan-ink/assets/ip-reference/standard.png (Xiaofan's face for consistency)
 

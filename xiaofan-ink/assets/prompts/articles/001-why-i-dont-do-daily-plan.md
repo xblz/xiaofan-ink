@@ -14,7 +14,7 @@
 
 | 图 | 表情 | 选词理由 |
 |---|---|---|
-| 01 纸堆 | deadpan | 入口段"计划填满了但人空了",陈述事实,deadpan 合适 |
+| 01 纸堆 | deadpan | 入口段"计划填满了但人空了",陈述事实,合适 |
 | 02 洞里伸手 | **困惑**(08-confused) | "列计划花的时间比做的事还多",困惑表情传递"没想清楚" |
 | 03 蹲角落 | **疲惫**(09-tired) | "做完才看清",做完的累,疲惫表情到位 |
 | 04 站回头 | **满足**(11-satisfied) | 收束段"放弃计划反而做得更多",满足收尾 |
@@ -56,7 +56,7 @@ Structure type: 概念隐喻
 
 Core idea: 计划列得越细,真正在做事的时间反而越少 - 计划填满了纸,但人空了。
 
-Composition: A tall messy pile of paper sheets, all written on with handwritten lists and crossed-out items, taking up most of the canvas. Xiaofan is half-sunk INTO the paper pile, only his head and one hand visible above the pile, his other hand holding a pencil that just finished writing something. He looks out with a deadpan calm expression, as if the pile of plans has swallowed him. The papers around him are various sizes and slightly chaotic. Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, deadpan calm expression, hand-drawn line art) half-sunk in a paper pile.
+Composition: A tall messy pile of paper sheets, all written on with handwritten lists and crossed-out items, taking up most of the canvas. Xiaofan is half-sunk INTO the paper pile, only his head and one hand visible above the pile, his other hand holding a pencil that just finished writing something. He looks out with a neutral expression, as if the pile of plans has swallowed him. The papers around him are various sizes and slightly chaotic. Xiaofan (a young Asian man matching the IP reference standard.png, hand-drawn line art) half-sunk in a paper pile.
 
 Chinese handwritten labels: '今日 8 件事' in orange on a top sheet / '划掉' in red on multiple sheets / '没做' in blue on a remaining sheet
 
@@ -75,7 +75,7 @@ Structure type: 角色状态
 
 Core idea: 划掉的越多,空的就越多 - 计划给你虚假完成感。
 
-Composition: A small scene like a paper rain. Sheets of paper with handwritten lists are falling from above like rain, scattered around. Xiaofan is reaching his hand UP from a hole/circular opening in the ground, trying to catch a falling sheet but his hand is just missing it. His face shows slightly furrowed brows, eyes half-closed, mouth slightly relaxed - a confused expression. Only his upper body and reaching hand are visible. Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slightly furrowed brows, eyes half-closed, mouth slightly relaxed, hand-drawn line art) reaching up from a hole.
+Composition: A small scene like a paper rain. Sheets of paper with handwritten lists are falling from above like rain, scattered around. Xiaofan is reaching his hand UP from a hole/circular opening in the ground, trying to catch a falling sheet but his hand is just missing it. His face shows slightly furrowed brows, eyes half-closed, mouth slightly relaxed - a confused expression. Only his upper body and reaching hand are visible. Xiaofan (a young Asian man matching the IP reference standard.png, slightly furrowed brows, eyes half-closed, mouth slightly relaxed, hand-drawn line art) reaching up from a hole.
 
 Chinese handwritten labels: '?' in red near his hand / '想做' in blue on a falling sheet / '没做' in red on another / '划掉' in red on a third
 
@@ -94,7 +94,7 @@ Structure type: 概念隐喻
 
 Core idea: 做完才知道对不对,不对就调整 - 不追求管理所有事,只追求今天做这 3 件。
 
-Composition: Xiaofan is squatting in a corner of the canvas, looking OFF-CANVAS to the right with a tired expression. In the lower-right of the canvas, a desk with a stack of messy draft papers (representing "things actually done"). His drooping brows and half-closed eyes convey exhaustion from doing the work. A small coffee cup on the desk (he has been at it for a while). Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, drooping brows, eyes half-closed, mouth loose, hand-drawn line art) squatting in a corner looking off-canvas tired.
+Composition: Xiaofan is squatting in a corner of the canvas, looking OFF-CANVAS to the right with a tired expression. In the lower-right of the canvas, a desk with a stack of messy draft papers (representing "things actually done"). His drooping brows and half-closed eyes convey exhaustion from doing the work. A small coffee cup on the desk (he has been at it for a while). Xiaofan (a young Asian man matching the IP reference standard.png, drooping brows, eyes half-closed, mouth loose, hand-drawn line art) squatting in a corner looking off-canvas tired.
 
 Chinese handwritten labels: '做完才看清' in orange / '3 件事' in blue / '调整' in orange near him
 
@@ -113,7 +113,7 @@ Structure type: 概念隐喻 + 收束
 
 Core idea: 计划没让我多做一件事。放弃计划,我反而做得更多。
 
-Composition: Xiaofan is standing at a small simple desk, looking back over his shoulder toward the viewer's outside. On the desk: 3 handwritten papers labeled (3 things done), 1 red-bordered paper labeled "not doing today" list, and a half-drunk coffee cup (he is holding it). His face has a slight 1-2mm mouth upturn, half-closed eyes, level brows - a quiet satisfaction. He is not facing the desk; he is looking back, as if to say "the work is done, no need to plan more." Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slight 1-2mm mouth upturn, half-closed eyes, level brows, hand-drawn line art) standing at a desk looking back, holding a coffee cup.
+Composition: Xiaofan is standing at a small simple desk, looking back over his shoulder toward the viewer's outside. On the desk: 3 handwritten papers labeled (3 things done), 1 red-bordered paper labeled "not doing today" list, and a half-drunk coffee cup (he is holding it). His face has a slight 1-2mm mouth upturn, half-closed eyes, level brows - a quiet satisfaction. He is not facing the desk; he is looking back, as if to say "the work is done, no need to plan more." Xiaofan (a young Asian man matching the IP reference standard.png, slight 1-2mm mouth upturn, half-closed eyes, level brows, hand-drawn line art) standing at a desk looking back, holding a coffee cup.
 
 Chinese handwritten labels: '3 件做完' in blue on three sheets / '不做' in red on the red-bordered paper / '放弃计划' in orange / '半杯' near the coffee cup
 

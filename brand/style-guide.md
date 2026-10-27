@@ -104,12 +104,37 @@
 - 起源: v2.8.17 024-028 5 篇连发 0 IP, IP 失联 13 天, 用户(9/10)反馈修正
 - v1.8 决策表依然有效, 但加这条下限: 状态型/集体观察/工具反思, 02/03 位置插 1 张 IP 锚点
 
+**IP 形象形态** (v2.8.43 新增, **硬规则, 最高优先级**):
+- **尖角碎发刘海垂到眉骨上方** —— 核心识别特征, **⛔ 绝对不能后梳 / 不能露额头**
+- 眉毛: **淡短斜线** (有, 但很淡, 明显比头发浅)
+- 眼睛: **细长眼缝** = 一笔细弧 + 内眼角一个小黑点, **不是黑豆眼、不是动漫眼**
+- 脸型: **偏长椭圆**, 下颌线干净, 下巴略窄
+- 唇: 薄, 一笔短横
+- 手: **有体积、有指节、手指自然分开** (不是圆润卡通手, 不是三笔占位)
+- 头发: **黑, 但不是实心黑块** —— 密集笔触 + 可见白缝
+- 线条: 松、有飞白、不闭合, 不是干净矢量线
+
+> **事故来源**: v2.8.42 为消灭粗黑眉, 加了"额头完全空白 + 头发后梳", 直接抹掉刘海,
+> IP 从碎发少年变成背头成熟男, 040 被用户驳回"IP 形象完全不对"。
+> **历史 019-03 (1007 阅读) 是刘海+眉毛+细长眼, 用户从未反馈不像** ——
+> 说明 **发型/脸型/线条质感才是敏感点, 眉毛/眼睛细节不是**。
+> **遇到"脸不像", 先查发型和脸型, 不要先去砍五官。**
+> **每次加禁令前先问: 这条禁令会不会连带干掉别的东西?**
+
+**禁填充不能用抽象禁令** (v2.8.43 修正):
+- `Pure line drawing. Do NOT fill ... with solid black or grey.` **实测不管用** —— 040 重画 4 轮, 头发先变实心黑块, 改完又太浅像白发
+- 改用正向写法: `EVERYTHING is thin black pencil lines on white paper. NOTHING is filled in with solid colour.` + `Hair is drawn with many separate overlapping black strokes so it reads clearly DARK, while individual strand lines and small white gaps stay visible.`
+- **"黑"和"线稿质感"必须同时给**, 只给一头就跑到另一个极端
+
 **自检 (同步前必跑)**:
 - img 引用数 (`![]()` 数量) = front matter `images:` 列表数 → 不一致阻断
 - 每张配图 prompt 不含 `very hot` / `sweat` / `towel` / `electric fan` / `air conditioning` 这类"突出温度感" 关键词
 - 6-9 月的 IP 形象图 prompt 含 `short-sleeve t-shirt` 至少一次
 - 12-2 月的 IP 形象图 prompt 含 `winter coat` / `thick jacket` 至少一次
 - **5 张图里至少 1 张含 IP 形象** (front matter `expressions` 字段必须 ≥1/5 用) → 不达标阻断
+- **跑 `python3 xiaofan-ink/tools/ip-preflight.py check-prompt <prompt文件>`** → 有阻断项不许生图
+- **跑 `python3 xiaofan-ink/tools/ip-preflight.py check-essay <编号>`** → 校验 img 引用数 / 文件存在 / basename 顺序 / ffd8 JPEG / 1376×768
+- **含 IP 的图必须裁切放大看脸** (`ip-preflight.py crop-face <图>`), 整图验收 100% 漏眉毛
 
 ## 4. 封面(每篇推送的封面图)
 

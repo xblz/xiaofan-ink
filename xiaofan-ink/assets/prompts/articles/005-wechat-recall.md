@@ -36,7 +36,7 @@
 
 | 图 | 表情 | 选词理由 |
 |---|---|---|
-| 01 看手机 | deadpan | "看到了" 是平静反应, deadpan 合适 |
+| 01 看手机 | deadpan | "看到了" 是平静反应, 合适 |
 | 02 时间轴 | (去 IP, 无表情) | 状态型不需要人 |
 | 03 想 | **思考**(07-thoughtful) | "撤回是想让我没看到, 但我看到了" 真思考 |
 
@@ -84,7 +84,7 @@ Theme: 看手机, 看到撤回提示 - 朋友撤回了, 我看到了。
 
 Core idea: 撤回是 2 分钟内反悔, 但反悔这件事所有人都看见。我看见了。
 
-Composition: Xiaofan is sitting somewhere (no clear background, just white space), holding a phone with both hands, looking at the screen. On the phone screen, visible, is a WeChat-style chat with a grey line "X 撤回了一条消息". Xiaofan's expression is deadpan calm - he sees it, but doesn't react strongly. His body language is still, not shocked. The scene conveys "I saw it, I know you recalled, but I'm not going to make a big deal of it."
+Composition: Xiaofan is sitting somewhere (no clear background, just white space), holding a phone with both hands, looking at the screen. On the phone screen, visible, is a WeChat-style chat with a grey line "X 撤回了一条消息". Xiaofan's expression is neutral - he sees it, but doesn't react strongly. His body language is still, not shocked. The scene conveys "I saw it, I know you recalled, but I'm not going to make a big deal of it."
 
 Input: xiaofan-ink/assets/ip-reference/standard.png (Xiaofan's face for consistency)
 

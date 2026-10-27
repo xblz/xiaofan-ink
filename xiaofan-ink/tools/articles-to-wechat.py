@@ -99,6 +99,12 @@ def parse_front_matter(md_text):
         return {}, md_text
     fm_text = parts[1].strip()
     body = parts[2].strip()
+    # v2.8.32 加 sentinel: 检测到 `<!-- END-OF-POST -->` 后停止 body 解析
+    # 公众号草稿只需要正文 (5 段 ## + 5 张图 + 引用块), 配图说明/防重复池/待办等内部文档
+    # 应该移到外部 README.md 而不是同步到草稿箱
+    sentinel = "<!-- END-OF-POST -->"
+    if sentinel in body:
+        body = body.split(sentinel, 1)[0].rstrip()
     if yaml:
         try:
             meta = yaml.safe_load(fm_text) or {}

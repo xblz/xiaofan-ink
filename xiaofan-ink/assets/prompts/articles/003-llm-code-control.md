@@ -17,7 +17,7 @@
 - **避开历史**:001 用了"工具反思-节奏"(每日计划),002 用了"工具反思-专注"(番茄钟)
 - **跟 001/002 配对**:001 谈"节奏"(列计划),002 谈"专注"(深度工作),003 谈"控制权"(AI 协助),形成"工具三部曲"
 - **角度新切口**:"X 的边界"格式(承袭 002), 切口是"过程 > 结论"的延伸 — AI 跳过草稿直接交作品
-- **deadpan 调性匹配**:跟 000 "过程比结论值钱" 直接呼应, 形成系列内部核心理念的递进
+- **调性匹配**:跟 000 "过程比结论值钱" 直接呼应, 形成系列内部核心理念的递进
 - **热点贴合**:2026 年 Claude Code / Cursor / Codex 全面爆发, "AI 依赖反思" 是技术圈最热话题之一, 但本文切入点是"过程", 不是"AI 替代论"
 - **冷幽默收尾**:让 AI 写注释 — 注释这种"过程"AI 替代得了, 但代码本身不行
 
@@ -35,7 +35,7 @@
 
 | 图 | 表情 | 选词理由 |
 |---|---|---|
-| 01 看终端 | deadpan | "我应该高兴才对" 那种反讽的平静, deadpan 完美 |
+| 01 看终端 | deadpan | "我应该高兴才对" 那种反讽的平静, 完美 |
 | 02 散落代码 | (去 IP, 无表情) | 状态型不需要人 |
 | 03 切回敲键盘 | **困惑**(08-confused) | "我慌的是失去什么" — 真困惑, 不是装 |
 | 04 站桌回看 | **满足**(11-satisfied) | 收束的释然, "回到自己手写一行代码" |
@@ -84,7 +84,7 @@ Theme: 站在终端前看代码滚 - 跟代码的关系断了。
 
 Core idea: 我站在我自己的代码前面, 但代码在动, 我跟不上。
 
-Composition: Xiaofan is standing in front of a tall standing desk or workbench, looking at a large monitor / terminal screen. The screen shows code scrolling rapidly, lines moving too fast for him to read. Xiaofan is half-turned toward the viewer, with a deadpan calm expression as if he's watching a process he can no longer control. His posture is slightly stiff, not relaxed. The terminal window has a small "$_" cursor blinking. The whole scene conveys "I wrote this, but it's no longer mine."
+Composition: Xiaofan is standing in front of a tall standing desk or workbench, looking at a large monitor / terminal screen. The screen shows code scrolling rapidly, lines moving too fast for him to read. Xiaofan is half-turned toward the viewer, expression as if he's watching a process he can no longer control. His posture is slightly stiff, not relaxed. The terminal window has a small "$_" cursor blinking. The whole scene conveys "I wrote this, but it's no longer mine."
 
 Input: xiaofan-ink/assets/ip-reference/standard.png (Xiaofan's face for consistency)
 

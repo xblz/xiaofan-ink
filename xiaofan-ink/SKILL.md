@@ -9,7 +9,7 @@ description: 生成小凡风格的中文正文配图。用于用户要求为中�
 
 为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通,而是把文章里的关键判断、流程、结构、状态或隐喻,变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
 
-默认视觉 IP 是"小凡":一个细长单眼皮、碎短发、薄唇、**默认死板冷静**的年轻亚洲男性,基于真人手绘风格化转译,保持白板速写感的线稿气质。v1.0+ 表情库提供 5 个微表情变体(思考/困惑/疲惫/惊讶/满足),可在 IP 描述段里把 `deadpan calm expression` 替换为对应微表情词,默认一律 deadpan,同文最多 2-3 种不同表情。
+默认视觉 IP 是"小凡":一个碎短发、薄唇、整体气质清冷理性的年轻亚洲男性(基于真人手绘风格化转译),基于真人手绘风格化转译,保持白板速写感的线稿气质。v1.0+ 表情库提供 5 个微表情变体(思考/困惑/疲惫/惊讶/满足),可在 IP 描述段里把 `neutral expression` 替换为对应微表情词,同文最多 2-3 种不同表情(其余不写)。
 
 小凡不是吉祥物,不是贴纸,也不是站在角落里的装饰物,而是正在认真参与系统运转的荒诞工作者,正在做一件荒诞但成立的事。小凡必须参与画面的核心动作,不能只是站在旁边当装饰。
 
@@ -19,12 +19,15 @@ description: 生成小凡风格的中文正文配图。用于用户要求为中�
 
 按任务需要读取,不要一次塞满上下文:
 
+- `references/wechat-writing-rules.md`:**公众号写正文前必读**(数据反推版, 2026-10-04 全量后台)。选题/标题/正文字数/可划线句/互动钩子/发布自检, 全部带实测中位数。**先定选题再动笔。**
 - `references/style-dna.md`:风格 DNA、颜色、文字、禁忌。
 - `references/xiaofan-ip.md`:小凡 IP 的形象、性格、动作库、**备选装扮(6 张)、微表情库(5 张)**、禁忌。
 - `references/composition-patterns.md`:结构类型、原创隐喻方法和反复刻规则。
 - `references/prompt-template.md`:单张生图提示词模板,**包含表情选择 guidance**。
 - `references/qa-checklist.md`:生成后检查和迭代规则。
-- `assets/ip-reference/`:只作低频视觉校准,不进入默认生成路径。提供线条密度、留白比例、姿态松散度、装扮细节、表情变化幅度的参考(`standard.png` 是所有生图的 input_file_paths 必传项)。不要照抄这些案例的构图、物件或标注。
+- `assets/ip-reference/`:提供线条密度、留白比例、姿态松散度、装扮细节、表情变化幅度的参考。**`standard.png` 是所有生图的 input_file_paths 必传项**, 但**只传它不够** —— 渲染器会自由发挥, 必须同时在 prompt 里写死 IP 形态段 (见 `assets/prompts/_standard-ip-description.md` v2.8.43 段)。不要照抄这些案例的构图、物件或标注。
+
+> ⛔ **v2.8.42 事故**: 只靠 reference + 加"禁眉毛"禁令, 结果渲染器把头发后梳, **IP 核心识别特征(刘海)被抹掉**, 040 被用户驳回"IP 形象完全不对", 重画 4 轮。
 
 ## 工作流
 
@@ -59,15 +62,28 @@ description: 生成小凡风格的中文正文配图。用于用户要求为中�
 
 每张图只讲一个核心结构。提示词必须包含:
 
-- 16:9 横版中文正文配图
+- 16:9 横版中文正文配图 (抖音平台改 1:1)
 - 纯白背景
 - 黑色手绘线稿
 - 少量红色/橙色/蓝色中文手写批注
-- 大量留白
+- 公众号: **人物在场景里** (`Full scene with environment` + `The person is IN the scene`, 主体 50-65%)
+- 抖音: 大量留白 (`Subject occupies 40-60%` + `Very large empty white space`)
+- **IP 形态段 (必写, 不是可选)** —— 刘海/眉/眼/脸型/手, 见 `assets/prompts/_standard-ip-description.md` v2.8.43 段
+- **禁填充正向段 (必写)** —— `EVERYTHING is thin black pencil lines on white paper. NOTHING is filled in with solid colour.` + `HAIR DENSITY ...`
+- **线条质感段** —— `loose and sketchy ... flying-white gaps ... NOT clean vector art`
+- 文字锁定句 —— `The ONLY text in the entire image: XXX — 颜色 brush handwriting`
 - 小凡作为核心动作主体
 - 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
 
-不要复用近期用过的构图。`assets/ip-reference/` 只提供风格校准，不能直接复用已有姿态/物件/视角。同一篇文章的多张图，要让小凡的姿态、动作、物件、视角至少有 3 个不同维度在变化。每次都要从当前文章重新发明一个奇怪但成立的隐喻。具体反复刻高风险动作见 `references/composition-patterns.md` 的"反复刻规则"段。
+**公众号和抖音是两套模板, 不要混用** —— 留白要求和人物占比要求相反。完整模板见 `references/prompt-template.md`。
+
+**生图前先跑 preflight** (缺项会被拦, 省掉 4 轮返工):
+
+```bash
+python3 xiaofan-ink/tools/ip-preflight.py check-prompt 你的prompt.txt
+```
+
+不要复用近期用过的构图。`assets/ip-reference/` 只提供风格校准,不能直接复用已有姿态/物件/视角。同一篇文章的多张图,要让小凡的姿态、动作、物件、视角至少有 3 个不同维度在变化。每次都要从当前文章重新发明一个奇怪但成立的隐喻。具体反复刻高风险动作见 `references/composition-patterns.md` 的"反复刻规则"段。
 
 ### 4. 检查与迭代
 
@@ -80,6 +96,20 @@ description: 生成小凡风格的中文正文配图。用于用户要求为中�
 - 左上角出现"常见坑/流程图/系统架构图"等标题
 - 画风太可爱、幼稚、死板
 - 背景不是干净白底
+
+**含 IP 的图, 必须额外做 IP 形态验收** (先查这 3 条, 任一不过直接重画):
+
+- **刘海在不在?** 额头上有没有一撮撮尖角碎发垂到眉骨? (后梳 = 直接重画)
+- **眉毛是不是"淡短斜线"?** 一根都没有也算不过 —— 那是另一个方向的偏差
+- **眼睛是"细弧 + 内眼角小点", 还是两个黑豆?**
+
+**必须裁切放大看脸** —— 整图验收 100% 漏眉毛:
+
+```bash
+python3 xiaofan-ink/tools/ip-preflight.py crop-face 图.png
+```
+
+其它常见失真 (头发实心黑块 / 头发太浅像白发 / 脸偏圆 / 手是卡通手) 的修法见 `references/qa-checklist.md`「IP 形象失真怎么修」段 —— **注意是改成正向描述, 不是加禁令**。
 
 ### 5. 保存交付
 

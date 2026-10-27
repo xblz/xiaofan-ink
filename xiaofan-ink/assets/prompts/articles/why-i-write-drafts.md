@@ -29,7 +29,7 @@
 ### IP 描述段(deadpan 默认)
 
 ```
-Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, deadpan calm expression, hand-drawn line art) [姿态/动作/物件].
+Xiaofan (a young Asian man matching the IP reference standard.png, hand-drawn line art) [姿态/动作/物件].
 ```
 
 ### 完整 prompt
@@ -58,7 +58,7 @@ Constraints: Do not copy prior examples or reuse known case compositions; invent
 
 ### 表情选 deadpan 默认的原因
 
-入口段(文章开头),"我就是这样在做"是陈述状态,不需要情绪传递。用默认 deadpan 让"废稿堆"和"我从废稿里出来"形成视觉锚点,后续 3 张图再分梯度加情绪。
+入口段(文章开头),"我就是这样在做"是陈述状态,不需要情绪传递。用默认不写表情 让"废稿堆"和"我从废稿里出来"形成视觉锚点,后续 3 张图再分梯度加情绪。
 
 ---
 
@@ -67,10 +67,10 @@ Constraints: Do not copy prior examples or reuse known case compositions; invent
 ### IP 描述段(思考表情)
 
 ```
-Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, slightly raised right eyebrow, eyes looking down-left, mouth closed, hand-drawn line art) [姿态/动作/物件].
+Xiaofan (a young Asian man matching the IP reference standard.png, slightly raised right eyebrow, eyes looking down-left, mouth closed, hand-drawn line art) [姿态/动作/物件].
 ```
 
-> 注意:加表情后,`deadpan calm expression` 必须删掉(避免和表情词冲突)。
+> 注意:加表情后,`neutral expression` 不写,避免和表情词冲突。
 
 ### 完整 prompt
 
@@ -107,7 +107,7 @@ Constraints: Do not copy prior examples or reuse known case compositions; invent
 ### IP 描述段(疲惫表情)
 
 ```
-Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, drooping brows, eyes half-closed, mouth loose, hand-drawn line art) [姿态/动作/物件].
+Xiaofan (a young Asian man matching the IP reference standard.png, drooping brows, eyes half-closed, mouth loose, hand-drawn line art) [姿态/动作/物件].
 ```
 
 ### 完整 prompt
@@ -145,7 +145,7 @@ Constraints: Do not copy prior examples or reuse known case compositions; invent
 ### IP 描述段(deadpan 默认)
 
 ```
-Xiaofan (a young Asian man with short messy black bangs covering forehead, narrow single-eyelid eyes, thin lips, deadpan calm expression, hand-drawn line art) [姿态/动作/物件].
+Xiaofan (a young Asian man matching the IP reference standard.png, hand-drawn line art) [姿态/动作/物件].
 ```
 
 ### 完整 prompt
